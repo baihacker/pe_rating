@@ -193,6 +193,10 @@ int main(int argc, char *argv[])
   cout << "end = " << end << endl;
   cout << "top = " << top << endl;
   cout << "format = " << format << endl;
+  cout << "sig_limit = " << (int)sig_limit << endl;
+  cout << "sig_perf = " << (int)sig_perf << endl;
+  cout << "sig_newbie = " << (int)sig_newbie << endl;
+  cout << "sig_noise = " << sig_noise << endl;
   genStatistics(genFileList(dir, start, end), top, format);
   return 0;
 }
