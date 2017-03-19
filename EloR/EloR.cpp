@@ -12,42 +12,42 @@ using namespace std;
 
 ostream& operator<<(ostream& os, const Rating& r)
 {
-    os << int(r.mu) << "+/-" << int(r.sig);
-    return os;
+  os << int(r.mu) << "+/-" << int(r.sig);
+  return os;
 }
 
 // returns something near the mean if the ratings are consistent; near the median if they're far apart
 // offC and offM are constant and slope offsets, respectively
 double robustMean(const vector<Rating>& ratings, double offC, double offM)
 {
-    double lo = -1000, hi = 5000;
-    while (hi - lo > 1e-9)
-    {
-      double mid = (lo + hi) / 2;
-      double sum = offC + offM * mid;
-      for (const Rating& r : ratings)
-          sum += tanh((mid-r.mu)/r.sig) / r.sig;
-      if (sum > 0)
-          hi = mid;
-      else
-          lo = mid;
-    }
-    return (lo + hi) / 2;
+  double lo = -1000, hi = 5000;
+  while (hi - lo > 1e-9)
+  {
+    double mid = (lo + hi) / 2;
+    double sum = offC + offM * mid;
+    for (const Rating& r : ratings)
+      sum += tanh((mid-r.mu)/r.sig) / r.sig;
+    if (sum > 0)
+      hi = mid;
+    else
+      lo = mid;
+  }
+  return (lo + hi) / 2;
 }
 
 // ratings is a list of the participants, ordered from first to last place
 // returns: performance of the player in ratings[id] who tied against ratings[lo..hi]
 double performance(vector<Rating> ratings, int id, int lo, int hi)
 {
-    int N = ratings.size();
-    assert(0 <= lo && lo <= id && id <= hi && hi <= N-1);
-    double offset = 0;
-    for (int i = 0; i < lo; ++i)
-      offset += 1.0 / ratings[i].sig;
-    for (int i = hi+1; i < N; ++i)
-      offset -= 1.0 / ratings[i].sig;
-    ratings.push_back(ratings[id]);
-    return robustMean(ratings, offset);
+  int N = ratings.size();
+  assert(0 <= lo && lo <= id && id <= hi && hi <= N-1);
+  double offset = 0;
+  for (int i = 0; i < lo; ++i)
+    offset += 1.0 / ratings[i].sig;
+  for (int i = hi+1; i < N; ++i)
+    offset -= 1.0 / ratings[i].sig;
+  ratings.push_back(ratings[id]);
+  return robustMean(ratings, offset);
 }
 
 void handleHistory(map<string, Player>& players, const vector<string>& names,

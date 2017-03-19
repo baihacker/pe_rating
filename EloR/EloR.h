@@ -12,7 +12,7 @@
 using namespace std;
 
 const double sig_limit = 100; // limiting uncertainty for a player who competed a lot
-const double sig_perf = 250; // variation in individual performances
+const double sig_perf = 2222; // variation in individual performances
 const double sig_newbie = 350; // uncertainty for a new player
 const double sig_noise = sqrt( 1.0 / (1.0/sig_limit/sig_limit - 1.0/sig_perf/sig_perf)
                                - sig_limit*sig_limit );
@@ -67,7 +67,7 @@ struct Player
 
   RankTuple toTuple() const
   {
-    return make_tuple(conservativeRating(), name, maxRating, prevRating, perfs.back().mu);
+    return make_tuple(-conservativeRating(), name, maxRating, prevRating, perfs.back().mu);
   }
 
   string name;

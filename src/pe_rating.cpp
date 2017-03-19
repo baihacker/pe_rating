@@ -3,11 +3,20 @@
 #include <cstdio>
 #include <regex>
 #include <iostream>
+#include <set>
 using namespace std;
 
+#if 1
+// For auto downloaded data
+static regex line_reg("<tr><td><span style=\"font-size:80%;.*?</td></tr>");
+static regex name_reg("font-weight:bold;color:#555;\">.*?</span></td><td>(.*?)</td>");
+static regex decorated_name_reg("help;\" title=\".*?\">(.*?)</span>");
+#else
+// For manually copied data from browser (IE)
 static regex line_reg("<tr><td><span style=\"color: rgb\\(85, 85, 85\\);.*?</td></tr>");
 static regex name_reg("bold;\">.*?</span></td><td>(.*?)</td>");
 static regex decorated_name_reg("help;\">(.*?)</span>");
+#endif
 
 vector<string> parseRanks(const string& data)
 {
@@ -79,29 +88,74 @@ string alignName(const string& name)
   return result;
 }
 
-void genStatistics(const vector<string>& fileList)
+void genStatistics(const vector<string>& fileList, int top = -1, const string& format = "console")
 {
   map<string, Player> data;
+  set<string> all_guys;
+  vector<vector<string> > solver_data;
   for (const auto& iter: fileList)
   {
     vector<string> solvers = parseRanks(readFile(iter));
+    if (solvers.empty()) continue;
+#if 0
+    solver_data.push_back(solvers);
+    for (auto& iter: solvers) all_guys.insert(iter);
+#endif
+    if (top > 0 && solvers.size() > top) solvers.resize(top);
     handleHistory(data, solvers);
   }
+#if 0
+  int id = 0;
+  for (auto& iter: solver_data)
+  {
+    cerr << ++id << endl;
+    vector<string> vec = iter;
+    const int size = vec.size();
+    set<string> have;
+    for (auto& iter1: vec) have.insert(iter1);
+    for (auto& iter1: all_guys)
+      if (!have.count(iter1)) vec.push_back(iter1);
+    
+    const int n = vec.size();
+    vector<int> ranklo(n);
+    vector<int> rankhi(n);
+    for (int i = 0; i < size; ++i) ranklo[i] = rankhi[i] = i;
+    for (int i = size; i < n; ++i) ranklo[i] = size;
+    for (int i = size; i < n; ++i) rankhi[i] = n-1;
+    handleHistory(data, vec, ranklo, rankhi);
+  }
+#endif
 
   vector<Player::RankTuple> rank;
   for (auto& iter: data) rank.push_back(iter.second.toTuple());
   sort(rank.begin(), rank.end());
-  reverse(rank.begin(), rank.end());
-  for (auto& iter: rank)
+  //reverse(rank.begin(), rank.end());
+  
+  cout << "participants = " << rank.size() << endl;
+  if (format == "json")
   {
-    cout << alignName(get<1>(iter)) << "\t" << get<0>(iter) << "\t" << get<2>(iter) << endl;
+    for (auto& iter: rank)
+    {
+      cout << "(\"" << get<1>(iter) << "\"," << -get<0>(iter) << "," << get<2>(iter) << ")," << endl;
+    }
+  }
+  else 
+  {
+    for (auto& iter: rank)
+    {
+      cout << alignName(get<1>(iter)) << "\t" << -get<0>(iter) << "\t" << get<2>(iter) << endl;
+    }
   }
 }
+
 int main(int argc, char *argv[])
 {
   string dir = "../data/pe/recent/";
   int start = 0;
   int end = 1000;
+  int top = -1;
+  string format = "console";
+
   for (int i = 1; i < argc;)
   {
     if (argv[i][0] == '-' && (argv[i][1] == 'd' || argv[i][1] == 'D') && i + 1 < argc)
@@ -119,6 +173,16 @@ int main(int argc, char *argv[])
       end = atoi(argv[i+1]);
       i += 2;
     }
+    else if (argv[i][0] == '-' && (argv[i][1] == 't' || argv[i][1] == 'T') && i + 1 < argc)
+    {
+      top = atoi(argv[i+1]);
+      i += 2;
+    }
+    else if (argv[i][0] == '-' && (argv[i][1] == 'f' || argv[i][1] == 'F') && i + 1 < argc)
+    {
+      format = argv[i+1];
+      i += 2;
+    }
     else
     {
       ++i;
@@ -127,6 +191,8 @@ int main(int argc, char *argv[])
   cout << "dir = " << dir << endl;
   cout << "start = " << start << endl;
   cout << "end = " << end << endl;
-  genStatistics(genFileList(dir, start, end));
+  cout << "top = " << top << endl;
+  cout << "format = " << format << endl;
+  genStatistics(genFileList(dir, start, end), top, format);
   return 0;
 }
