@@ -1,0 +1,297 @@
+
+D:\hh\projects\git\pe_rating>g++ src/pe_rating.cpp EloR/EloR.cpp --std=c++11 -O3   && a -d data/pe/recent 
+This rating is based on Aram Ebtekar's algorithm: https://github.com/EbTech/EloR
+dir = data/pe/recent
+start = 0
+end = 1000
+top = -1
+format = console
+sig_limit = 100
+sig_perf = 2222
+sig_newbie = 350
+sig_noise = 4.50501
+participants = 283
+rank    id                      rating    max rating
+1       Min_25                  1556      1556      
+2       SlavaKabanovich         1556      1556      
+3       Tepsi                   1556      1556      
+4       WG4ZHZ2P2Q              1556      1556      
+5       aleksey                 1556      1556      
+6       baihacker               1556      1556      
+7       cmk                     1556      1556      
+8       haruya                  1556      1556      
+9       inamori                 1556      1556      
+10      laurent.mazare          1556      1556      
+11      lizhusong922            1556      1556      
+12      michael_ho              1556      1556      
+13      unime                   1556      1556      
+14      uwi                     1556      1556      
+15      x22                     1556      1556      
+16      Heiko Schwartz          1504      1504      
+17      Nivsir                  1504      1504      
+18      Stache                  1504      1504      
+19      Walker_lzy              1504      1504      
+20      bruce_love              1504      1504      
+21      grechnik                1504      1504      
+22      sergej.samborskij       1504      1504      
+23      abcwuhang               1474      1474      
+24      Bobbit                  1451      1451      
+25      Guego                   1451      1451      
+26      gilcu3                  1451      1451      
+27      gmt                     1451      1451      
+28      liuguangxi              1451      1451      
+29      nledoux                 1451      1451      
+30      stoned                  1451      1451      
+31      urimend                 1451      1451      
+32      utomaya                 1451      1451      
+33      ving                    1451      1451      
+34      JTJL                    1397      1397      
+35      Jerome R.               1397      1397      
+36      M.Healy                 1397      1397      
+37      MuthuVeerappanR         1397      1397      
+38      numerisereality         1397      1397      
+39      zimpha                  1397      1397      
+40      ajay_verma              1343      1343      
+41      candells                1343      1343      
+42      mathseal                1343      1343      
+43      pyrolykos               1343      1343      
+44      roosephu                1343      1343      
+45      shiina.ringo            1343      1343      
+46      Reiner Martin           1314      1343      
+47      AleksMat                1287      1287      
+48      DerekLedbetter          1287      1287      
+49      Gbroxey                 1287      1287      
+50      Lucky92                 1287      1287      
+51      RobertJohansson         1287      1287      
+52      asgerix                 1287      1287      
+53      chicken_master          1287      1287      
+54      ihung                   1287      1287      
+55      kunyavskiy              1287      1287      
+56      mdix                    1287      1287      
+57      pushistik               1287      1287      
+58      skyivben                1287      1287      
+59      toonijn                 1287      1287      
+60      willhsmit               1287      1287      
+61      ARoss                   1231      1231      
+62      IamPoosha               1231      1231      
+63      aardin                  1231      1231      
+64      akdheirl                1231      1231      
+65      akovski                 1231      1231      
+66      ax8529221               1231      1231      
+67      cyclops                 1231      1231      
+68      eagles                  1231      1231      
+69      ironman353              1231      1231      
+70      jpeg13                  1231      1231      
+71      matthias.schon          1231      1231      
+72      modem                   1231      1231      
+73      mr027                   1231      1231      
+74      olwispe                 1231      1231      
+75      stevefr01               1231      1231      
+76      ubiquitousgrape         1231      1231      
+77      pekempey                1204      1204      
+78      Anton_Lunyov            1175      1175      
+79      Jaehyun Park            1175      1175      
+80      Nero                    1175      1175      
+81      NotDan                  1175      1175      
+82      Peter de Rivaz          1175      1175      
+83      Ryals                   1175      1175      
+84      Samo Kralj              1175      1175      
+85      Santiago Egido          1175      1175      
+86      Sd.Invol                1175      1175      
+87      akaja                   1175      1175      
+88      al13n                   1175      1175      
+89      amic                    1175      1175      
+90      ariacas                 1175      1175      
+91      backtracking            1175      1175      
+92      bobby_eletrica          1175      1175      
+93      bunderscore             1175      1175      
+94      djocar                  1175      1175      
+95      elnn                    1175      1175      
+96      evanseverson            1175      1175      
+97      giab                    1175      1175      
+98      henru_wang              1175      1175      
+99      iakolzin                1175      1175      
+100     janowol                 1175      1175      
+101     learnmath               1175      1175      
+102     linguo                  1175      1175      
+103     lumyx                   1175      1175      
+104     maikaze                 1175      1175      
+105     mellendo                1175      1175      
+106     mscha                   1175      1175      
+107     nebviyks                1175      1175      
+108     ozgur.ozcelik           1175      1175      
+109     plamenko                1175      1175      
+110     smtosh                  1175      1175      
+111     superdenker             1175      1175      
+112     tcarr                   1175      1175      
+113     tmyklebu                1175      1175      
+114     tokoharu                1175      1175      
+115     vamsikal3               1175      1175      
+116     ynoth                   1175      1175      
+117     z_dziezyc               1175      1175      
+118     kongthui                1148      1175      
+119     smikulsk                1148      1148      
+120     Alain.Turbil            1117      1117      
+121     Carl Edman              1117      1117      
+122     Grenache                1117      1117      
+123     HowardTsai              1117      1117      
+124     Kunero                  1117      1117      
+125     LeinidR                 1117      1117      
+126     Lukasz16a               1117      1117      
+127     Mersenne                1117      1117      
+128     Obergscheidle           1117      1117      
+129     Oleg78                  1117      1117      
+130     Peter Welander          1117      1117      
+131     Sam777e                 1117      1117      
+132     Schattenjager           1117      1117      
+133     Stilwell                1117      1117      
+134     Talmon                  1117      1117      
+135     Tatsu_c                 1117      1117      
+136     ah.78                   1117      1117      
+137     andreamaf               1117      1117      
+138     aropan                  1117      1117      
+139     carlop                  1117      1117      
+140     czp                     1117      1117      
+141     devjoe                  1117      1117      
+142     dors                    1117      1117      
+143     fragali                 1117      1117      
+144     glodavac                1117      1117      
+145     jarip                   1117      1117      
+146     jonkadams               1117      1117      
+147     jozhan                  1117      1117      
+148     jtnydv25                1117      1117      
+149     kmlau                   1117      1117      
+150     m_aszek                 1117      1117      
+151     micangela               1117      1117      
+152     ofir                    1117      1117      
+153     polutropon              1117      1117      
+154     pwild                   1117      1117      
+155     quasisphere             1117      1117      
+156     robert                  1117      1117      
+157     rokusuke                1117      1117      
+158     romd93                  1117      1117      
+159     rosstherock             1117      1117      
+160     sdx96                   1117      1117      
+161     silbing                 1117      1117      
+162     sinan                   1117      1117      
+163     sugima                  1117      1117      
+164     tailcat                 1117      1117      
+165     tom.ridler              1117      1117      
+166     unc                     1117      1117      
+167     v6ph1                   1117      1117      
+168     xanxerus                1117      1117      
+169     zko5acs                 1117      1117      
+170     markusmeister           1092      1092      
+171     1739                    1059      1059      
+172     Alec_tk                 1059      1059      
+173     Andr_Sml                1059      1059      
+174     Batalov                 1059      1059      
+175     BenRamsay               1059      1059      
+176     Brian.Mellendorf        1059      1059      
+177     DJohn                   1059      1059      
+178     DKrijgsman              1059      1059      
+179     Darko                   1059      1059      
+180     David-Kerr              1059      1059      
+181     Dennis Gokman           1059      1059      
+182     Dr.Korbin               1059      1059      
+183     Eli98612                1059      1059      
+184     Forehead                1059      1059      
+185     Friedrich Regen         1059      1059      
+186     Guri_Harari             1059      1059      
+187     JoeTotale               1059      1059      
+188     Jon_McLean              1059      1059      
+189     Jonathan Paulson        1059      1059      
+190     Jrdevil                 1059      1059      
+191     KennyColnago            1059      1059      
+192     Kevin_Hebb              1059      1059      
+193     Khalil Fazal            1059      1059      
+194     Krushak                 1059      1059      
+195     LatticeGuy              1059      1059      
+196     MacKnights              1059      1059      
+197     MarX                    1059      1059      
+198     Matthew Fahrbach        1059      1059      
+199     MinnetBedrar            1059      1059      
+200     Momotaro                1059      1059      
+201     PandaFromHell           1059      1059      
+202     Pengolodh               1059      1059      
+203     RenDet                  1059      1059      
+204     Robert_OConnor          1059      1059      
+205     S.Schnaible             1059      1059      
+206     Serge                   1059      1059      
+207     Shishu94                1059      1059      
+208     Smylic                  1059      1059      
+209     Soul                    1059      1059      
+210     Thierry Machicoane      1059      1059      
+211     TomasRiker              1059      1059      
+212     Travary                 1059      1059      
+213     Weifeng_Sun             1059      1059      
+214     Wistik                  1059      1059      
+215     YMDragon                1059      1059      
+216     Yishun                  1059      1059      
+217     Zach                    1059      1059      
+218     Zarchi                  1059      1059      
+219     Zegalur                 1059      1059      
+220     albert                  1059      1059      
+221     alecobbe                1059      1059      
+222     alexei.soloview         1059      1059      
+223     anythingapplied         1059      1059      
+224     apia                    1059      1059      
+225     aplump                  1059      1059      
+226     blajer                  1059      1059      
+227     bobbyfritz              1059      1059      
+228     bonsaihawk              1059      1059      
+229     br4mski1                1059      1059      
+230     conestoga               1059      1059      
+231     daveFNbuck              1059      1059      
+232     extrarity               1059      1059      
+233     gillesT                 1059      1059      
+234     googlweknoall           1059      1059      
+235     guy.scrum               1059      1059      
+236     gvhl                    1059      1059      
+237     haibin9632              1059      1059      
+238     henric.e                1059      1059      
+239     heyshb                  1059      1059      
+240     imgry22                 1059      1059      
+241     indi                    1059      1059      
+242     ipaster                 1059      1059      
+243     irekb                   1059      1059      
+244     jfirester               1059      1059      
+245     jfreiberg               1059      1059      
+246     jfry                    1059      1059      
+247     joelsmith               1059      1059      
+248     jujaji                  1059      1059      
+249     kfj83hjdh38fjdg         1059      1059      
+250     l1t                     1059      1059      
+251     macdjord                1059      1059      
+252     matteose                1059      1059      
+253     mattmadi                1059      1059      
+254     mcslane                 1059      1059      
+255     monteverdi              1059      1059      
+256     nomis                   1059      1059      
+257     oiegger                 1059      1059      
+258     paske57                 1059      1059      
+259     philippe_57721          1059      1059      
+260     popobawa                1059      1059      
+261     rabox                   1059      1059      
+262     rathmann                1059      1059      
+263     riemann                 1059      1059      
+264     rmcc                    1059      1059      
+265     sesquiup                1059      1059      
+266     shepherd_a              1059      1059      
+267     snubcube                1059      1059      
+268     suj2to                  1059      1059      
+269     taizhou                 1059      1059      
+270     tarass                  1059      1059      
+271     tb65536                 1059      1059      
+272     tsnguyen                1059      1059      
+273     user202729              1059      1059      
+274     uuchip                  1059      1059      
+275     wndrobny                1059      1059      
+276     youth4ever              1059      1059      
+277     zball                   1059      1059      
+278     zokrisd                 1059      1059      
+279     zuse                    1059      1059      
+280     birka0                  1034      1034      
+281     bobmath                 1034      1059      
+282     rlipsett                977       977       
+283     swizletek               977       977       
