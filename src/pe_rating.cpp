@@ -193,6 +193,7 @@ int main(int argc, char *argv[])
       ++i;
     }
   }
+  cout << "This rating is based on Aram Ebtekar's algorithm: https://github.com/EbTech/EloR" << endl;
   cout << "dir = " << dir << endl;
   cout << "start = " << start << endl;
   cout << "end = " << end << endl;
