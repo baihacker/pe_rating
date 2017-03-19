@@ -60,34 +60,73 @@ string readFile(const string& path)
   return result;
 }
 
-vector<string> getRecentFileList()
+vector<string> genFileList(const string& dir, int start, int end)
 {
   vector<string> result;
-  for (int i = 586; i <= 595; ++i)
+  for (int i = start; i <= end; ++i)
   {
     char buff[256];
-    sprintf(buff, "../data/pe/recent/pe%d.txt", i);
+    sprintf(buff, "%s/pe%d.txt", dir.c_str(), i);
     result.push_back(buff);
   }
   return result;
 }
 
-void genRecentRatings()
+string alignName(const string& name)
+{
+  string result = name;
+  while (result.length() < 24) result.append(" ");
+  return result;
+}
+
+void genStatistics(const vector<string>& fileList)
 {
   map<string, Player> data;
-  for (const auto& iter: getRecentFileList())
+  for (const auto& iter: fileList)
   {
     vector<string> solvers = parseRanks(readFile(iter));
     handleHistory(data, solvers);
   }
-  vector<Player::RankTuple> vec;
-  for (auto& iter: data) vec.push_back(iter.second.toTuple());
-  sort(vec.begin(), vec.end());
-  reverse(vec.begin(), vec.end());
-  for (auto& iter: vec) cout << get<1>(iter) << " " << get<0>(iter) << " " << get<2>(iter) << endl;
+
+  vector<Player::RankTuple> rank;
+  for (auto& iter: data) rank.push_back(iter.second.toTuple());
+  sort(rank.begin(), rank.end());
+  reverse(rank.begin(), rank.end());
+  for (auto& iter: rank)
+  {
+    cout << alignName(get<1>(iter)) << "\t" << get<0>(iter) << "\t" << get<2>(iter) << endl;
+  }
 }
-int main()
+int main(int argc, char *argv[])
 {
-  genRecentRatings();
+  string dir = "../data/pe/recent/";
+  int start = 0;
+  int end = 1000;
+  for (int i = 1; i < argc;)
+  {
+    if (argv[i][0] == '-' && (argv[i][1] == 'd' || argv[i][1] == 'D') && i + 1 < argc)
+    {
+      dir = argv[i+1];
+      i += 2;
+    }
+    else if (argv[i][0] == '-' && (argv[i][1] == 's' || argv[i][1] == 'S') && i + 1 < argc)
+    {
+      start = atoi(argv[i+1]);
+      i += 2;
+    }
+    else if (argv[i][0] == '-' && (argv[i][1] == 'e' || argv[i][1] == 'E') && i + 1 < argc)
+    {
+      end = atoi(argv[i+1]);
+      i += 2;
+    }
+    else
+    {
+      ++i;
+    }
+  }
+  cout << "dir = " << dir << endl;
+  cout << "start = " << start << endl;
+  cout << "end = " << end << endl;
+  genStatistics(genFileList(dir, start, end));
   return 0;
 }
