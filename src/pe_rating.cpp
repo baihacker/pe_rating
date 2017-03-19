@@ -3,6 +3,7 @@
 #include <cstdio>
 #include <regex>
 #include <iostream>
+#include <iomanip>
 #include <set>
 using namespace std;
 
@@ -131,19 +132,23 @@ void genStatistics(const vector<string>& fileList, int top = -1, const string& f
   sort(rank.begin(), rank.end());
   //reverse(rank.begin(), rank.end());
   
-  cout << "participants = " << rank.size() << endl;
+  const int size =  rank.size();
+  cout << "participants = " << size << endl;
   if (format == "json")
   {
-    for (auto& iter: rank)
+    for (int i = 0; i < size; ++i)
     {
-      cout << "(\"" << get<1>(iter) << "\"," << -get<0>(iter) << "," << get<2>(iter) << ")," << endl;
+      auto& iter = rank[i];
+      cout << "(" << i + 1 << ",\"" << get<1>(iter) << "\"," << -get<0>(iter) << "," << get<2>(iter) << ")," << endl;
     }
   }
   else 
   {
-    for (auto& iter: rank)
+    cout << left << setw(8) << "rank" << setw(24) << "id" << setw(10) << "rating" << setw(10) << "max rating" << endl;
+    for (int i = 0; i < size; ++i)
     {
-      cout << alignName(get<1>(iter)) << "\t" << -get<0>(iter) << "\t" << get<2>(iter) << endl;
+      auto& iter = rank[i];
+      cout << left << setw(8) << i + 1 << setw(24) << get<1>(iter) << setw(10) << -get<0>(iter) << setw(10) << get<2>(iter) << endl;
     }
   }
 }
