@@ -1,5 +1,3 @@
-
-D:\hh\projects\git\pe_rating>g++ src/pe_rating.cpp EloR/EloR.cpp --std=c++11 -O3   && a -d data/pe/recent 
 This rating is based on Aram Ebtekar's algorithm: https://github.com/EbTech/EloR
 dir = data/pe/recent
 start = 0
