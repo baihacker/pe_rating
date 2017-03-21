@@ -35,7 +35,7 @@ void genElorStatistics(const vector<string>& fileList, int top, const string& fo
     for (auto& iter1: vec) have.insert(iter1);
     for (auto& iter1: all_guys)
       if (!have.count(iter1)) vec.push_back(iter1);
-    
+
     const int n = vec.size();
     vector<int> ranklo(n);
     vector<int> rankhi(n);
@@ -50,28 +50,31 @@ void genElorStatistics(const vector<string>& fileList, int top, const string& fo
   for (auto& iter: data) rank.push_back(iter.second.toTuple());
   sort(rank.begin(), rank.end());
   //reverse(rank.begin(), rank.end());
-  
+
   const int size =  rank.size();
+
   cout << "This rating is based on Aram Ebtekar's algorithm: https://github.com/EbTech/EloR" << endl;
+  cout << endl;
   cout << "sig_limit = " << (int)sig_limit << endl;
   cout << "sig_perf = " << (int)sig_perf << endl;
   cout << "sig_newbie = " << (int)sig_newbie << endl;
   cout << "sig_noise = " << sig_noise << endl;
   cout << "participants = " << size << endl;
+  cout << endl;
   if (format == "json")
   {
     for (int i = 0; i < size; ++i)
     {
-      auto& iter = rank[i];
+      const auto& iter = rank[i];
       cout << "(" << i + 1 << ",\"" << get<1>(iter) << "\"," << -get<0>(iter) << "," << get<2>(iter) << ")," << endl;
     }
   }
-  else 
+  else
   {
     cout << left << setw(8) << "rank" << setw(24) << "id" << setw(10) << "rating" << setw(10) << "max rating" << endl;
     for (int i = 0; i < size; ++i)
     {
-      auto& iter = rank[i];
+      const auto& iter = rank[i];
       cout << left << setw(8) << i + 1 << setw(24) << get<1>(iter) << setw(10) << -get<0>(iter) << setw(10) << get<2>(iter) << endl;
     }
   }

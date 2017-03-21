@@ -121,12 +121,17 @@ int main(int argc, char *argv[])
     }
   }
 
+  cout << "Author baihacker (bailiangsky@gmail.com)" << endl;
+  cout << "https://github.com/baihacker" << endl;
+  cout << endl;
+
   cout << "dir = " << dir << endl;
   cout << "start = " << start << endl;
   cout << "end = " << end << endl;
   cout << "top = " << top << endl;
   cout << "format = " << format << endl;
+  cout << endl;
 
-  genElorStatistics(genFileList(dir, start, end), top, format);
+  genCfStatistics(genFileList(dir, start, end), top, format);
   return 0;
 }
