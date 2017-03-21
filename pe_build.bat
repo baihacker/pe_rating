@@ -1,1 +1,1 @@
-pe++.py src/pe_rating.cpp EloR/EloR.cpp
+pe++.py src/pe_rating.cpp src/elor.cpp src/EloR/EloR.cpp
