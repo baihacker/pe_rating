@@ -1,4 +1,4 @@
-#include "Elor.h"
+#include "EloR.h"
 
 #include <iostream>
 #include <cassert>

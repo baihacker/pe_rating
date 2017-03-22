@@ -12,6 +12,7 @@
 #include <iostream>
 #include <iomanip>
 #include <set>
+#include <map>
 using namespace std;
 
 struct Contestant
@@ -310,6 +311,39 @@ public:
   }
 };
 
+int getRoundNumber(const string& filename)
+{
+  int l = filename.length();
+  return atoi(filename.substr(l-7, 3).c_str());
+}
+#if 0
+int modifier[][2] = {
+  {483, 1},
+  {484, 2},
+  {485, 9},
+  {486, 1},
+  {487, 1},
+  {488, 4},
+  {489, 3},
+  {491, 1},
+  {482, 1},
+};
+
+void modify77(const string& filename, vector<string>& solvers)
+{
+  const int round = getRoundNumber(filename);
+  const int size = sizeof(modifier)/sizeof(modifier[0]);
+  for (int i = 0; i < size; ++i)
+  {
+    if (round == modifier[i][0])
+    {
+      solvers.insert(solvers.begin() + modifier[i][1] - 1, "77");
+      return;
+    }
+  }
+}
+#endif
+
 void genCfStatistics(const vector<string>& fileList, int top, const string& format)
 {
   CodeforcesRatingCalculator calculator;
@@ -317,8 +351,10 @@ void genCfStatistics(const vector<string>& fileList, int top, const string& form
   map<string, int> max_rating;
   for (const auto& iter: fileList)
   {
+    //if (getRoundNumber(iter) < 495) continue;
     vector<string> solvers = parseRanks(readFile(iter));
     if (solvers.empty()) continue;
+    //modify77(iter, solvers);
     if (top > 0 && solvers.size() > top) solvers.resize(top);
     auto changes = calculator.calculateRatingChanges(data, solvers);
     for (auto& change : changes)
@@ -347,7 +383,7 @@ void genCfStatistics(const vector<string>& fileList, int top, const string& form
 
   const int size = vec.size();
 
-  cout << "This rating is based on Cordforces' rating system." << endl;
+  cout << "This rating is based on Codeforces' rating system." << endl;
   cout << "Author Mike Mirzayanov (mirzayanovmr@gmail.com)" << endl;
   cout << "http://codeforces.com/blog/entry/20762" << endl;
   cout << "http://codeforces.com/contest/1/submission/13861109" << endl;

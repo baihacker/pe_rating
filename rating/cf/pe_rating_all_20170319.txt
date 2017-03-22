@@ -7,7 +7,7 @@ end = 1000
 top = -1
 format = console
 
-This rating is based on Cordforces' rating system.
+This rating is based on Codeforces' rating system.
 Author Mike Mirzayanov (mirzayanovmr@gmail.com)
 http://codeforces.com/blog/entry/20762
 http://codeforces.com/contest/1/submission/13861109
