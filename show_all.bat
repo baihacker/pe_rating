@@ -1,1 +1,1 @@
-g++ src/pe_rating.cpp src/elor.cpp src/cf.cpp src/EloR/EloR.cpp --std=c++11 -O3 && a -d data/pe/all
+g++ src/pe_rating.cpp src/elor.cpp src/cf.cpp src/EloR/EloR.cpp --std=c++11 -O3 && a -d data/pe

@@ -82,7 +82,7 @@ vector<string> genFileList(const string& dir, int start, int end)
 
 int main(int argc, char *argv[])
 {
-  string dir = "../data/pe/recent/";
+  string dir = "data/pe/";
   int start = 0;
   int end = 1000;
   int top = -1;

@@ -8,6 +8,7 @@
 #include "pe_rating.h"
 
 #include <cstdio>
+#include <cmath>
 #include <regex>
 #include <iostream>
 #include <iomanip>
