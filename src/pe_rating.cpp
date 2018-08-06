@@ -7,7 +7,7 @@ using namespace std;
 
 #if 1
 // For auto downloaded data
-static regex line_reg("<tr><td><span style=\"font-size:80%;.*?</td></tr>");
+static regex line_reg("<td><span style=\"font-size:80%;.*?</td></tr>");
 static regex name_reg("font-weight:bold;color:#555;\">.*?</span></td><td>(.*?)</td>");
 static regex decorated_name_reg("help;\" title=\".*?\">(.*?)</span>");
 #else
