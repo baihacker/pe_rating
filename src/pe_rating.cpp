@@ -8,13 +8,7 @@
 using namespace std;
 
 void genElorStatistics(const vector<string>& fileList, int top = -1,
-                       const string& format = "console");
-
-void genCfStatistics(const vector<FileId>& fileList, int top = -1,
-                     const string& format = "console");
-
-void genElorStatistics(const vector<string>& fileList, int top,
-                       const string& format) {
+                       const string& format = "console") {
   map<string, Player> data;
   set<string> all_guys;
   vector<vector<string> > solver_data;
@@ -91,6 +85,7 @@ int getRoundNumber(const string& filename) {
   int l = filename.length();
   return atoi(filename.substr(l - 7, 3).c_str());
 }
+
 #if 0
 int modifier[][2] = {
   {483, 1},
@@ -119,8 +114,8 @@ void modify77(const string& filename, vector<string>& solvers)
 }
 #endif
 
-void genCfStatistics(const vector<FileId>& fileList, int top,
-                     const string& format) {
+void genCfStatistics(const vector<FileId>& fileList, int top = -1,
+                     const string& format = "console") {
   CodeforcesRatingCalculator calculator;
   map<string, int> data;
   map<string, int> max_rating;
