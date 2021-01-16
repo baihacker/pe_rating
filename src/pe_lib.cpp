@@ -8,8 +8,8 @@ static regex line_reg("<td><span class=\".*?</td></tr>");
 static regex separator("</td><td>");
 static regex decorated_name_reg("title=\".*?\">(.*?)</span>");
 
-vector<string> parseRanks(const string& data) {
-  vector<string> result;
+vector<SolverInfo> parseSolverInfo(const string& data) {
+  vector<SolverInfo> result;
 
   sregex_iterator token(data.begin(), data.end(), line_reg);
   sregex_iterator end;
@@ -35,7 +35,7 @@ vector<string> parseRanks(const string& data) {
         tokens[4].substr(tokens[4].size() - 10) == "</td></tr>") {
       tokens[4] = tokens[4].substr(0, tokens[4].size() - 10);
     }
-    result.push_back(tokens[1]);
+    result.push_back({tokens[1], tokens});
   }
   return result;
 }

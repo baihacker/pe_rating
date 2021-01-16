@@ -5,7 +5,13 @@
 #include <string>
 using namespace std;
 
-vector<string> parseRanks(const string& data);
+struct SolverInfo {
+  string name;
+  vector<string> tokens;
+};
+
+vector<SolverInfo> parseSolverInfo(const string& data);
+
 string readFile(const string& path);
 
 #endif

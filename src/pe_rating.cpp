@@ -23,14 +23,16 @@ void genElorStatistics(const vector<string>& fileList, int top,
   set<string> all_guys;
   vector<vector<string> > solver_data;
   for (const auto& iter : fileList) {
-    vector<string> solvers = parseRanks(readFile(iter));
+    vector<SolverInfo> solvers = parseSolverInfo(readFile(iter));
     if (solvers.empty()) continue;
 #if 0
     solver_data.push_back(solvers);
     for (auto& iter: solvers) all_guys.insert(iter);
 #endif
     if (top > 0 && solvers.size() > top) solvers.resize(top);
-    handleHistory(data, solvers);
+    vector<string> solver_names;
+    for (auto& iter: solvers) solver_names.push_back(iter.name);
+    handleHistory(data, solver_names);
   }
 #if 0
   int id = 0;
@@ -127,11 +129,13 @@ void genCfStatistics(const vector<FileId>& fileList, int top,
   map<string, int> max_rating;
   for (const auto& iter : fileList) {
     // if (getRoundNumber(iter) < 495) continue;
-    vector<string> solvers = parseRanks(readFile(iter.path));
-    if (solvers.empty()) continue;
-    // modify77(iter, solvers);
-    if (top > 0 && solvers.size() > top) solvers.resize(top);
-    auto changes = calculator.calculateRatingChanges(data, solvers);
+    vector<SolverInfo> solvers = parseSolverInfo(readFile(iter.path));
+    vector<string> solver_names;
+    for (auto& iter: solvers) solver_names.push_back(iter.name);
+    if (solver_names.empty()) continue;
+    // modify77(iter, solver_names);
+    if (top > 0 && solver_names.size() > top) solver_names.resize(top);
+    auto changes = calculator.calculateRatingChanges(data, solver_names);
     for (auto& change : changes) {
       if (data.count(change.first)) {
         data[change.first] += change.second;
@@ -190,8 +194,6 @@ vector<FileId> genFileList(const string& dir, int start, int end) {
   }
   return result;
 }
-
-void testRegex() { parseRanks(readFile("fetch/pe477.txt")); }
 
 int main(int argc, char* argv[]) {
   string dir = "data/pe/";
