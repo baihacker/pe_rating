@@ -7,10 +7,6 @@
 #include <iostream>
 using namespace std;
 
-struct FileId {
-  string path;
-  int id;
-};
 void genElorStatistics(const vector<string>& fileList, int top = -1,
                        const string& format = "console");
 
@@ -184,16 +180,6 @@ void genCfStatistics(const vector<FileId>& fileList, int top,
            << iter.first << setw(10) << max_rating[iter.second] << endl;
     }
   }
-}
-
-vector<FileId> genFileList(const string& dir, int start, int end) {
-  vector<FileId> result;
-  for (int i = start; i <= end; ++i) {
-    char buff[256];
-    sprintf(buff, "%s/pe%d.txt", dir.c_str(), i);
-    result.push_back({buff, i});
-  }
-  return result;
 }
 
 int main(int argc, char* argv[]) {

@@ -40,6 +40,16 @@ vector<SolverInfo> parseSolverInfo(const string& data) {
   return result;
 }
 
+vector<FileId> genFileList(const string& dir, int start, int end) {
+  vector<FileId> result;
+  for (int i = start; i <= end; ++i) {
+    char buff[256];
+    sprintf(buff, "%s/pe%d.txt", dir.c_str(), i);
+    result.push_back({buff, i});
+  }
+  return result;
+}
+
 string readFile(const string& path) {
   const int buffer_size = 1 << 20;
   string buffer;
