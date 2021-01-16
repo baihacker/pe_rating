@@ -5,19 +5,9 @@
 #include <iostream>
 using namespace std;
 
-#if 1
-// For auto downloaded data
 static regex line_reg("<td><span class=\".*?</td></tr>");
-static regex name_reg(
-    "</td><td>(.*?)</td><td><a href=\"location");
+static regex separator("</td><td>");
 static regex decorated_name_reg("title=\".*?\">(.*?)</span>");
-#else
-// For manually copied data from browser (IE)
-static regex line_reg(
-    "<tr><td><span style=\"color: rgb\\(85, 85, 85\\);.*?</td></tr>");
-static regex name_reg("bold;\">.*?</span></td><td>(.*?)</td>");
-static regex decorated_name_reg("help;\">(.*?)</span>");
-#endif
 
 vector<string> parseRanks(const string& data) {
   vector<string> result;
@@ -26,16 +16,26 @@ vector<string> parseRanks(const string& data) {
   sregex_iterator end;
   for (; token != end; ++token) {
     const string& line = token->str();
-    smatch match;
-    if (regex_search(line, match, name_reg)) {
-      smatch dnamematch;
-      string s(match[0].str());
-      if (regex_search(s, dnamematch, decorated_name_reg)) {
-        result.push_back(dnamematch[1]);
-      } else {
-        result.push_back(match[1]);
-      }
+    vector<string> tokens;
+    {
+      sregex_token_iterator p(line.begin(), line.end(), separator, -1);
+      sregex_token_iterator end;
+      while (p != end) tokens.push_back(*p++);
     }
+    if (tokens.size() != 5) {
+      cerr << "cannot parse: " << line << endl;
+      continue;
+    }
+    // Fix decorarted name
+    smatch dnamematch;
+    if (regex_search(tokens[1], dnamematch, decorated_name_reg)) {
+      tokens[1] = dnamematch[1];
+    }
+    // Remove </td></tr>
+    if (tokens[4].size() >= 10 && tokens[4].substr(tokens[4].size() - 10) == "</td></tr>") {
+      tokens[4] = tokens[4].substr(0, tokens[4].size() - 10);
+    }
+    result.push_back(tokens[1]);
   }
   return result;
 }
@@ -61,16 +61,17 @@ string readFile(const string& path) {
   return result;
 }
 
-vector<string> genFileList(const string& dir, int start, int end) {
-  vector<string> result;
+vector<FileId> genFileList(const string& dir, int start, int end) {
+  vector<FileId> result;
   for (int i = start; i <= end; ++i) {
     char buff[256];
     sprintf(buff, "%s/pe%d.txt", dir.c_str(), i);
-    result.push_back(buff);
+    result.push_back({buff, i});
   }
   return result;
 }
 
+void testRegex() { parseRanks(readFile("fetch/pe477.txt")); }
 
 int main(int argc, char* argv[]) {
   string dir = "data/pe/";

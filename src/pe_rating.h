@@ -9,7 +9,12 @@ vector<string> parseRanks(const string& data);
 string readFile(const string& path);
 void genElorStatistics(const vector<string>& fileList, int top = -1,
                        const string& format = "console");
-void genCfStatistics(const vector<string>& fileList, int top = -1,
+struct FileId {
+  string path;
+  int id;
+};
+
+void genCfStatistics(const vector<FileId>& fileList, int top = -1,
                      const string& format = "console");
 
 #endif

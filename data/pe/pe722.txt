@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Colin Hughes" />
+<meta name="description" content="A website dedicated to the fascinating world of mathematics and programming" />
+<meta name="keywords" content="programming,mathematics,problems,puzzles" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fastest Solvers - Project Euler</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="themes/20201111/style_main.css" />
+<link rel="stylesheet" type="text/css" href="themes/20201111/style_default.css" />
+</head>
+
+<body>
+
+<div id="container">
+<div id="header" class="noprint">
+   <img src="themes/20201111/logo_default.png" alt="" />
+<div id="info_panel">
+Logged in as <strong>baihacker</strong><br>Sat, 16 Jan 2021, 10:35<br><span class="tooltip"><form class="csrf_form" method="post" action="sign_out"><input type="image" src="images/icons/sign_out.png" class="icon"><input type="hidden" name="csrf_token" value="66a48739dc35545efa1fd9c56df05c69nBfVIxCq3uS0GrFAgV4Uf+1H/h8t6T7Z8bsaJxpVtW5PYYn4g6g4OT4M3b5dtERS1UEQXlA6fYL1xd0="></form><span class="tooltiptext_narrow">Sign Out</span></span>&nbsp;&nbsp;&nbsp;<a href="search"><img src="images/icons/search_engine.png" alt="Search Problems" title="Search Problems" class="icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="rss2_euler.xml"><img src="images/icons/rss.png" alt="RSS Feed" title="RSS Feed" class="icon"></a>
+</div><!--end_info_panel-->
+</div> <!--end_header-->
+<div id="navigation" class="nav noprint">
+<a href="about" title="About"  accesskey="h">About</a>
+<a href="archives" title="Archives"  accesskey="1">Archives</a>
+<a href="recent" title="Recent"  accesskey="2">Recent</a>
+<a href="progress" title="Progress"  accesskey="3">Progress</a>
+<a href="account" title="Account"  accesskey="4">Account</a>
+<a href="news" title="News"  accesskey="5">News</a>
+<a href="friends" title="Friends"  accesskey="6">Friends</a>
+<a href="statistics" title="Statistics"  id="current" accesskey="7">Statistics</a>
+   <a class="hamburger" id="hamburger">
+         <div class="bar"></div>
+         <div class="bar"></div>
+         <div class="bar"></div>
+   </a>
+
+</div> <!--end_nav-->
+
+<div id="content">
+
+<div id="statistics_fastest_solvers_page">
+<div id="cache_info">Cached: Fri, 15 Jan 2021, 11:26</div><h2><a href="problem=722">Fastest Solvers - Problem 722</a></h2><table class="grid"><tr><th>&nbsp;</th><th class="username_column">User</th><th>&nbsp;</th><th class="language_column">Language</th><th class="time_column">Time To Solve</th><tr>
+<td><span class="smallest strong">1st</span></td><td>alaneos777</td><td><a href="location=Mexico"><img src="images/flags/mexico.png" title="Mexico" alt="Mexico" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>16  minutes, 24  seconds</td></tr><tr>
+<td><span class="smallest strong">2nd</span></td><td>LayCurse</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>17  minutes, 5  seconds</td></tr><tr>
+<td><span class="smallest strong">3rd</span></td><td>ecnerwala</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>17  minutes, 19  seconds</td></tr><tr>
+<td><span class="smallest strong">4th</span></td><td>uwi</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=Java">Java</a></td><td>18  minutes, 14  seconds</td></tr><tr>
+<td><span class="smallest strong">5th</span></td><td>vapor</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=Mathematica">Mathematica</a></td><td>22  minutes, 34  seconds</td></tr><tr>
+<td><span class="smallest strong">6th</span></td><td>shs.10978</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>28  minutes, 7  seconds</td></tr><tr>
+<td><span class="smallest strong">7th</span></td><td>hos-lyric</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=D">D</a></td><td>29  minutes, 14  seconds</td></tr><tr>
+<td><span class="smallest strong">8th</span></td><td>brob26</td><td><a href="location=Australia"><img src="images/flags/australia.png" title="Australia" alt="Australia" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>29  minutes, 42  seconds</td></tr><tr>
+<td><span class="smallest strong">9th</span></td><td>aleksey</td><td><a href="location=Russia"><img src="images/flags/russia.png" title="Russia" alt="Russia" class="flag"></a></td><td><a href="language=OCaml">OCaml</a></td><td>34  minutes, 3  seconds</td></tr><tr>
+<td><span class="smallest strong">10th</span></td><td><span class="italic" title="aviwl">Avi Levy</span></td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>35  minutes, 36  seconds</td></tr><tr>
+<td><span class="smallest strong">11th</span></td><td>radeye</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td>&nbsp;</td><td>35  minutes, 57  seconds</td></tr><tr>
+<td><span class="smallest strong">12th</span></td><td>rkm0959</td><td><a href="location=South_Korea"><img src="images/flags/south_korea.png" title="South Korea" alt="South Korea" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>45  minutes, 30  seconds</td></tr><tr>
+<td><span class="smallest strong">13th</span></td><td>liuguangxi</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>45  minutes, 38  seconds</td></tr><tr>
+<td><span class="smallest strong">14th</span></td><td>chocorusk</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>46  minutes, 45  seconds</td></tr><tr>
+<td><span class="smallest strong">15th</span></td><td><span class="italic" title="lzyrapx">lzyrapx</span></td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>47  minutes, 39  seconds</td></tr><tr>
+<td><span class="smallest strong">16th</span></td><td><span class="italic" title="sajnin">jschnei</span></td><td><a href="location=Canada"><img src="images/flags/canada.png" title="Canada" alt="Canada" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>50  minutes, 4  seconds</td></tr><tr id="id_current">
+<td><span class="smallest strong">17th</span></td><td>baihacker</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>1  hour, 3  minutes, 2  seconds</td></tr><tr>
+<td><span class="smallest strong">18th</span></td><td>AlvinTse</td><td>&nbsp;</td><td>&nbsp;</td><td>1  hour, 9  minutes, 13  seconds</td></tr><tr>
+<td><span class="smallest strong">19th</span></td><td>natsugiri</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>1  hour, 10  minutes, 49  seconds</td></tr><tr>
+<td><span class="smallest strong">20th</span></td><td>utomaya</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td>&nbsp;</td><td>1  hour, 17  minutes, 11  seconds</td></tr><tr>
+<td><span class="smallest strong">21st</span></td><td>turtlecurler</td><td>&nbsp;</td><td>&nbsp;</td><td>1  hour, 17  minutes, 24  seconds</td></tr><tr>
+<td><span class="smallest strong">22nd</span></td><td><span class="italic" title="lionel.m">Lionel Moisan</span></td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>1  hour, 20  minutes, 42  seconds</td></tr><tr>
+<td><span class="smallest strong">23rd</span></td><td>nadando</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>1  hour, 24  minutes, 14  seconds</td></tr><tr>
+<td><span class="smallest strong">24th</span></td><td>SlavaKabanovich</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Java">Java</a></td><td>1  hour, 32  minutes</td></tr><tr>
+<td><span class="smallest strong">25th</span></td><td>BerkeleyMath</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td>&nbsp;</td><td>1  hour, 40  minutes, 29  seconds</td></tr><tr>
+<td><span class="smallest strong">26th</span></td><td>dors</td><td><a href="location=Israel"><img src="images/flags/israel.png" title="Israel" alt="Israel" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>1  hour, 43  minutes, 50  seconds</td></tr><tr>
+<td><span class="smallest strong">27th</span></td><td>sevengame</td><td><a href="location=South_Korea"><img src="images/flags/south_korea.png" title="South Korea" alt="South Korea" class="flag"></a></td><td>&nbsp;</td><td>1  hour, 51  minutes, 21  seconds</td></tr><tr>
+<td><span class="smallest strong">28th</span></td><td><span class="italic" title="jeromeraulin">Jerome R.</span></td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td><a href="language=PARI%252FGP">PARI/GP</a></td><td>1  hour, 53  minutes, 3  seconds</td></tr><tr>
+<td><span class="smallest strong">29th</span></td><td>mdmullin</td><td>&nbsp;</td><td><a href="language=PARI%252FGP">PARI/GP</a></td><td>1  hour, 59  minutes, 8  seconds</td></tr><tr>
+<td><span class="smallest strong">30th</span></td><td>Bobbit</td><td><a href="location=England"><img src="images/flags/england.png" title="England" alt="England" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>2  hours, 5  minutes, 33  seconds</td></tr><tr>
+<td><span class="smallest strong">31st</span></td><td>rmal30</td><td><a href="location=Australia"><img src="images/flags/australia.png" title="Australia" alt="Australia" class="flag"></a></td><td><a href="language=Haskell">Haskell</a></td><td>2  hours, 19  minutes, 53  seconds</td></tr><tr>
+<td><span class="smallest strong">32nd</span></td><td>crex</td><td><a href="location=Germany"><img src="images/flags/germany.png" title="Germany" alt="Germany" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>2  hours, 20  minutes</td></tr><tr>
+<td><span class="smallest strong">33rd</span></td><td>ysymyth</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Mathematica">Mathematica</a></td><td>2  hours, 22  minutes, 1  second</td></tr><tr>
+<td><span class="smallest strong">34th</span></td><td>JohnsSmyth</td><td>&nbsp;</td><td>&nbsp;</td><td>2  hours, 22  minutes, 35  seconds</td></tr><tr>
+<td><span class="smallest strong">35th</span></td><td>Tepsi</td><td><a href="location=Hungary"><img src="images/flags/hungary.png" title="Hungary" alt="Hungary" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>2  hours, 30  minutes</td></tr><tr>
+<td><span class="smallest strong">36th</span></td><td>squabby</td><td>&nbsp;</td><td>&nbsp;</td><td>2  hours, 39  minutes, 41  seconds</td></tr><tr>
+<td><span class="smallest strong">37th</span></td><td><span class="italic" title="segido">Santiago Egido</span></td><td><a href="location=Spain"><img src="images/flags/spain.png" title="Spain" alt="Spain" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>2  hours, 44  minutes, 18  seconds</td></tr><tr>
+<td><span class="smallest strong">38th</span></td><td>haruya</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=Ruby">Ruby</a></td><td>2  hours, 45  minutes, 2  seconds</td></tr><tr>
+<td><span class="smallest strong">39th</span></td><td>strong49</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=Mathematica">Mathematica</a></td><td>2  hours, 54  minutes, 17  seconds</td></tr><tr>
+<td><span class="smallest strong">40th</span></td><td><span class="italic" title="Jackolantern">ironman353</span></td><td><a href="location=India"><img src="images/flags/india.png" title="India" alt="India" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>2  hours, 54  minutes, 18  seconds</td></tr><tr>
+<td><span class="smallest strong">41st</span></td><td>v6ph1</td><td><a href="location=Germany"><img src="images/flags/germany.png" title="Germany" alt="Germany" class="flag"></a></td><td>&nbsp;</td><td>3  hours, 8  minutes, 7  seconds</td></tr><tr>
+<td><span class="smallest strong">42nd</span></td><td><span class="italic" title="vrobyka">robert</span></td><td><a href="location=Romania"><img src="images/flags/romania.png" title="Romania" alt="Romania" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>3  hours, 14  minutes, 17  seconds</td></tr><tr>
+<td><span class="smallest strong">43rd</span></td><td>amagri</td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td><a href="language=PARI%252FGP">PARI/GP</a></td><td>3  hours, 24  minutes, 54  seconds</td></tr><tr>
+<td><span class="smallest strong">44th</span></td><td><span class="italic" title="reinermartin">Reiner Martin</span></td><td><a href="location=Germany"><img src="images/flags/germany.png" title="Germany" alt="Germany" class="flag"></a></td><td><a href="language=Julia">Julia</a></td><td>3  hours, 28  minutes, 32  seconds</td></tr><tr>
+<td><span class="smallest strong">45th</span></td><td>dario2994</td><td><a href="location=Italy"><img src="images/flags/italy.png" title="Italy" alt="Italy" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>3  hours, 54  minutes, 54  seconds</td></tr><tr>
+<td><span class="smallest strong">46th</span></td><td>nledoux</td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td><a href="language=C%2523">C#</a></td><td>4  hours, 10  minutes, 22  seconds</td></tr><tr>
+<td><span class="smallest strong">47th</span></td><td>x22</td><td><a href="location=Slovakia"><img src="images/flags/slovakia.png" title="Slovakia" alt="Slovakia" class="flag"></a></td><td><a href="language=Java">Java</a></td><td>4  hours, 15  minutes, 43  seconds</td></tr><tr>
+<td><span class="smallest strong">48th</span></td><td>Doraki</td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td><a href="language=OCaml">OCaml</a></td><td>4  hours, 35  minutes</td></tr><tr>
+<td><span class="smallest strong">49th</span></td><td>abcwuhang</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>4  hours, 38  minutes, 57  seconds</td></tr><tr>
+<td><span class="smallest strong">50th</span></td><td><span class="italic" title="wywcgs">Wu Yin</span></td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=Pencil%252FPaper">Pencil/Paper</a></td><td>4  hours, 39  minutes, 36  seconds</td></tr><tr>
+<td><span class="smallest strong">51st</span></td><td>Pengolodh</td><td><a href="location=Germany"><img src="images/flags/germany.png" title="Germany" alt="Germany" class="flag"></a></td><td><a href="language=Java">Java</a></td><td>4  hours, 39  minutes, 59  seconds</td></tr><tr>
+<td><span class="smallest strong">52nd</span></td><td>numerisereality</td><td><a href="location=Italy"><img src="images/flags/italy.png" title="Italy" alt="Italy" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>4  hours, 41  minutes, 55  seconds</td></tr><tr>
+<td><span class="smallest strong">53rd</span></td><td>btnlq</td><td><a href="location=Russia"><img src="images/flags/russia.png" title="Russia" alt="Russia" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>4  hours, 43  minutes, 40  seconds</td></tr><tr>
+<td><span class="smallest strong">54th</span></td><td>stch</td><td><a href="location=Canada"><img src="images/flags/canada.png" title="Canada" alt="Canada" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>4  hours, 51  minutes, 54  seconds</td></tr><tr>
+<td><span class="smallest strong">55th</span></td><td>MuthuVeerappanR</td><td><a href="location=India"><img src="images/flags/india.png" title="India" alt="India" class="flag"></a></td><td><a href="language=Mathematica">Mathematica</a></td><td>5  hours, 1  minute, 42  seconds</td></tr><tr>
+<td><span class="smallest strong">56th</span></td><td>Guego</td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>5  hours, 3  minutes, 8  seconds</td></tr><tr>
+<td><span class="smallest strong">57th</span></td><td><span class="italic" title="RagnarGrootKoerkamp">Ragnar</span></td><td><a href="location=Netherlands"><img src="images/flags/netherlands.png" title="Netherlands" alt="Netherlands" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>5  hours, 15  minutes, 13  seconds</td></tr><tr>
+<td><span class="smallest strong">58th</span></td><td>__LW__</td><td><a href="location=England"><img src="images/flags/england.png" title="England" alt="England" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>5  hours, 20  minutes, 58  seconds</td></tr><tr>
+<td><span class="smallest strong">59th</span></td><td>ludopulles</td><td><a href="location=Netherlands"><img src="images/flags/netherlands.png" title="Netherlands" alt="Netherlands" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>5  hours, 56  minutes, 49  seconds</td></tr><tr>
+<td><span class="smallest strong">60th</span></td><td>olwispe</td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td><a href="language=Java">Java</a></td><td>6  hours, 30  minutes, 2  seconds</td></tr><tr>
+<td><span class="smallest strong">61st</span></td><td>stimmer</td><td>&nbsp;</td><td><a href="language=Sage">Sage</a></td><td>6  hours, 45  minutes, 51  seconds</td></tr><tr>
+<td><span class="smallest strong">62nd</span></td><td>__gar__</td><td><a href="location=India"><img src="images/flags/india.png" title="India" alt="India" class="flag"></a></td><td><a href="language=Sage">Sage</a></td><td>6  hours, 48  minutes, 44  seconds</td></tr><tr>
+<td><span class="smallest strong">63rd</span></td><td>mees.de.vries</td><td><a href="location=Netherlands"><img src="images/flags/netherlands.png" title="Netherlands" alt="Netherlands" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>6  hours, 51  minutes, 52  seconds</td></tr><tr>
+<td><span class="smallest strong">64th</span></td><td><span class="italic" title="Reinierfs">Reinier</span></td><td><a href="location=Netherlands"><img src="images/flags/netherlands.png" title="Netherlands" alt="Netherlands" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>6  hours, 59  minutes, 57  seconds</td></tr><tr>
+<td><span class="smallest strong">65th</span></td><td><span class="italic" title="Thomas_Beuman">Thomas Beuman</span></td><td><a href="location=Netherlands"><img src="images/flags/netherlands.png" title="Netherlands" alt="Netherlands" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>7  hours, 21  minutes, 50  seconds</td></tr><tr>
+<td><span class="smallest strong">66th</span></td><td>CSFGSAL</td><td><a href="location=England"><img src="images/flags/england.png" title="England" alt="England" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>7  hours, 22  minutes, 14  seconds</td></tr><tr>
+<td><span class="smallest strong">67th</span></td><td>Golovanov399</td><td><a href="location=Russia"><img src="images/flags/russia.png" title="Russia" alt="Russia" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>7  hours, 27  minutes, 5  seconds</td></tr><tr>
+<td><span class="smallest strong">68th</span></td><td>sergej.samborskij</td><td><a href="location=Russia"><img src="images/flags/russia.png" title="Russia" alt="Russia" class="flag"></a></td><td><a href="language=PARI%252FGP">PARI/GP</a></td><td>7  hours, 28  minutes, 23  seconds</td></tr><tr>
+<td><span class="smallest strong">69th</span></td><td><span class="italic" title="SethTroisi">Seth Troisi</span></td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>7  hours, 55  minutes, 35  seconds</td></tr><tr>
+<td><span class="smallest strong">70th</span></td><td>kirika-comp</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>8  hours, 26  seconds</td></tr><tr>
+<td><span class="smallest strong">71st</span></td><td>grechnik</td><td><a href="location=Russia"><img src="images/flags/russia.png" title="Russia" alt="Russia" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>8  hours, 10  minutes, 6  seconds</td></tr><tr>
+<td><span class="smallest strong">72nd</span></td><td>rguadalups24</td><td><a href="location=Philippines"><img src="images/flags/philippines.png" title="Philippines" alt="Philippines" class="flag"></a></td><td><a href="language=Magma">Magma</a></td><td>8  hours, 13  minutes, 27  seconds</td></tr><tr>
+<td><span class="smallest strong">73rd</span></td><td>roosephu</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=Rust">Rust</a></td><td>8  hours, 19  minutes, 49  seconds</td></tr><tr>
+<td><span class="smallest strong">74th</span></td><td>pseudospin</td><td><a href="location=England"><img src="images/flags/england.png" title="England" alt="England" class="flag"></a></td><td><a href="language=R">R</a></td><td>8  hours, 34  minutes, 40  seconds</td></tr><tr>
+<td><span class="smallest strong">75th</span></td><td>czp</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=Mathematica">Mathematica</a></td><td>8  hours, 34  minutes, 53  seconds</td></tr><tr>
+<td><span class="smallest strong">76th</span></td><td>hidesugar</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>8  hours, 56  minutes, 54  seconds</td></tr><tr>
+<td><span class="smallest strong">77th</span></td><td>kotulek</td><td><a href="location=Netherlands"><img src="images/flags/netherlands.png" title="Netherlands" alt="Netherlands" class="flag"></a></td><td><a href="language=C%2523">C#</a></td><td>9  hours, 6  minutes, 52  seconds</td></tr><tr>
+<td><span class="smallest strong">78th</span></td><td><span class="italic" title="S.CEROI">Steph. C.</span></td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>9  hours, 12  minutes, 40  seconds</td></tr><tr>
+<td><span class="smallest strong">79th</span></td><td>jobu</td><td><a href="location=Germany"><img src="images/flags/germany.png" title="Germany" alt="Germany" class="flag"></a></td><td><a href="language=Sage">Sage</a></td><td>9  hours, 18  minutes, 25  seconds</td></tr><tr>
+<td><span class="smallest strong">80th</span></td><td>shlomif</td><td><a href="location=Israel"><img src="images/flags/israel.png" title="Israel" alt="Israel" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>9  hours, 45  minutes, 34  seconds</td></tr><tr>
+<td><span class="smallest strong">81st</span></td><td>jj_rabeyrin</td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td>&nbsp;</td><td>9  hours, 47  minutes, 49  seconds</td></tr><tr>
+<td><span class="smallest strong">82nd</span></td><td>lycaste</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=Sage">Sage</a></td><td>9  hours, 59  minutes, 6  seconds</td></tr><tr>
+<td><span class="smallest strong">83rd</span></td><td>Stache</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=C%2523">C#</a></td><td>10  hours, 7  minutes, 8  seconds</td></tr><tr>
+<td><span class="smallest strong">84th</span></td><td>shiina.ringo</td><td>&nbsp;</td><td>&nbsp;</td><td>10  hours, 13  minutes, 29  seconds</td></tr><tr>
+<td><span class="smallest strong">85th</span></td><td>maenpaa</td><td><a href="location=Italy"><img src="images/flags/italy.png" title="Italy" alt="Italy" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>10  hours, 14  minutes, 3  seconds</td></tr><tr>
+<td><span class="smallest strong">86th</span></td><td>Kerpoo</td><td><a href="location=Iran"><img src="images/flags/iran.png" title="Iran" alt="Iran" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>10  hours, 40  minutes, 42  seconds</td></tr><tr>
+<td><span class="smallest strong">87th</span></td><td>VicTheTurtle</td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>11  hours, 4  minutes, 35  seconds</td></tr><tr>
+<td><span class="smallest strong">88th</span></td><td>lizhusong922</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>11  hours, 19  minutes, 8  seconds</td></tr><tr>
+<td><span class="smallest strong">89th</span></td><td>abcdefg3085</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>11  hours, 30  minutes, 21  seconds</td></tr><tr>
+<td><span class="smallest strong">90th</span></td><td>fakesson</td><td><a href="location=Sweden"><img src="images/flags/sweden.png" title="Sweden" alt="Sweden" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>11  hours, 43  minutes, 55  seconds</td></tr><tr>
+<td><span class="smallest strong">91st</span></td><td>jinzhr93</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>11  hours, 53  minutes, 35  seconds</td></tr><tr>
+<td><span class="smallest strong">92nd</span></td><td>voltara</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>11  hours, 57  minutes, 50  seconds</td></tr><tr>
+<td><span class="smallest strong">93rd</span></td><td>Cees.Duivenvoorde</td><td><a href="location=Netherlands"><img src="images/flags/netherlands.png" title="Netherlands" alt="Netherlands" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>12  hours, 7  minutes, 50  seconds</td></tr><tr>
+<td><span class="smallest strong">94th</span></td><td>evanseverson</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Java">Java</a></td><td>12  hours, 9  minutes, 2  seconds</td></tr><tr>
+<td><span class="smallest strong">95th</span></td><td>EddyFerreira</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>13  hours, 9  minutes, 53  seconds</td></tr><tr>
+<td><span class="smallest strong">96th</span></td><td>snabit</td><td><a href="location=Denmark"><img src="images/flags/denmark.png" title="Denmark" alt="Denmark" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>13  hours, 18  minutes, 42  seconds</td></tr><tr>
+<td><span class="smallest strong">97th</span></td><td>ehunt</td><td>&nbsp;</td><td>&nbsp;</td><td>13  hours, 24  minutes, 43  seconds</td></tr><tr>
+<td><span class="smallest strong">98th</span></td><td>Zarchi</td><td><a href="location=Iceland"><img src="images/flags/iceland.png" title="Iceland" alt="Iceland" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>13  hours, 30  minutes, 31  seconds</td></tr><tr>
+<td><span class="smallest strong">99th</span></td><td><span class="italic" title="kennethklinger">polutropon</span></td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Mathematica">Mathematica</a></td><td>13  hours, 32  minutes, 56  seconds</td></tr><tr>
+<td><span class="smallest strong">100th</span></td><td><span class="italic" title="dkogos">doctord</span></td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>13  hours, 43  minutes, 40  seconds</td></tr></table>
+</div></div> <!--end_content-->
+</div> <!--end_container-->
+
+<div id="footer" class="noprint">
+Project Euler: <a href="copyright">Copyright Information</a> | <a href="privacy">Privacy Policy</a>
+</div> <!--end_footer-->
+<div id="modal_window">
+   <div id="modal_content" class="message_body">
+   <p>The page has been left unattended for too long and that link/button is no longer active. Please refresh the page.</p>
+   </div>
+</div> <!--end_modal_window-->
+<script src="js/general.js"></script>
+
+</body>
+</html>

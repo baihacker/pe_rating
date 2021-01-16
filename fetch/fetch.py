@@ -4,8 +4,8 @@ import socket
 
 socket.setdefaulttimeout(60)
 
-cookie='PHPSESSID=db67214e2d5aefe36c635f08867d3d19; keep_alive=1610819119%23274577%23UK3Hb3ydLSV2dUdhnzWpaoWzWOzXxJni'
-minid=353
+cookie=''
+minid=277
 maxid=633
 
 def fetch(id):

@@ -308,14 +308,14 @@ void modify77(const string& filename, vector<string>& solvers)
 }
 #endif
 
-void genCfStatistics(const vector<string>& fileList, int top,
+void genCfStatistics(const vector<FileId>& fileList, int top,
                      const string& format) {
   CodeforcesRatingCalculator calculator;
   map<string, int> data;
   map<string, int> max_rating;
   for (const auto& iter : fileList) {
     // if (getRoundNumber(iter) < 495) continue;
-    vector<string> solvers = parseRanks(readFile(iter));
+    vector<string> solvers = parseRanks(readFile(iter.path));
     if (solvers.empty()) continue;
     // modify77(iter, solvers);
     if (top > 0 && solvers.size() > top) solvers.resize(top);
