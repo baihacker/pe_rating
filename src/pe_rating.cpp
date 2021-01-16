@@ -24,14 +24,15 @@ void genElorStatistics(const vector<string>& fileList, int top,
   vector<vector<string> > solver_data;
   for (const auto& iter : fileList) {
     vector<SolverInfo> solvers = parseSolverInfo(readFile(iter));
-    if (solvers.empty()) continue;
-#if 0
-    solver_data.push_back(solvers);
-    for (auto& iter: solvers) all_guys.insert(iter);
-#endif
-    if (top > 0 && solvers.size() > top) solvers.resize(top);
     vector<string> solver_names;
-    for (auto& iter: solvers) solver_names.push_back(iter.name);
+    for (auto& iter : solvers) solver_names.push_back(iter.name);
+    if (solver_names.empty()) continue;
+#if 0
+    solver_data.push_back(solver_names);
+    for (auto& iter: solver_names) all_guys.insert(iter);
+#endif
+    if (top > 0 && solver_names.size() > top) solver_names.resize(top);
+
     handleHistory(data, solver_names);
   }
 #if 0
@@ -131,7 +132,7 @@ void genCfStatistics(const vector<FileId>& fileList, int top,
     // if (getRoundNumber(iter) < 495) continue;
     vector<SolverInfo> solvers = parseSolverInfo(readFile(iter.path));
     vector<string> solver_names;
-    for (auto& iter: solvers) solver_names.push_back(iter.name);
+    for (auto& iter : solvers) solver_names.push_back(iter.name);
     if (solver_names.empty()) continue;
     // modify77(iter, solver_names);
     if (top > 0 && solver_names.size() > top) solver_names.resize(top);
