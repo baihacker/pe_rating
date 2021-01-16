@@ -2,9 +2,10 @@ import urllib2
 import time
 import socket
 
-socket.setdefaulttimeout(20)
+socket.setdefaulttimeout(60)
 
-cookie='DYNSRV=lin-10-170-0-17; PHPSESSID=7187f92cbeaf5a331738110bf1d97398; keep_alive=1533579616%23274577%23pGtxN7tYe0HQeHNv0MPP2R30cS6H1Lzx'
+cookie='PHPSESSID=db67214e2d5aefe36c635f08867d3d19; keep_alive=1610819119%23274577%23UK3Hb3ydLSV2dUdhnzWpaoWzWOzXxJni'
+minid=353
 maxid=633
 
 def fetch(id):
@@ -16,7 +17,7 @@ def fetch(id):
   return result
 
 def fetch_all():
-  for i in range(277, maxid+1):
+  for i in range(minid, maxid+1):
 
     filename = 'pe%d.txt'%i
     print(filename)

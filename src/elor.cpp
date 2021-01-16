@@ -8,13 +8,12 @@
 #include <set>
 using namespace std;
 
-void genElorStatistics(const vector<string>& fileList, int top, const string& format)
-{
+void genElorStatistics(const vector<string>& fileList, int top,
+                       const string& format) {
   map<string, Player> data;
   set<string> all_guys;
   vector<vector<string> > solver_data;
-  for (const auto& iter: fileList)
-  {
+  for (const auto& iter : fileList) {
     vector<string> solvers = parseRanks(readFile(iter));
     if (solvers.empty()) continue;
 #if 0
@@ -47,13 +46,15 @@ void genElorStatistics(const vector<string>& fileList, int top, const string& fo
 #endif
 
   vector<Player::RankTuple> rank;
-  for (auto& iter: data) rank.push_back(iter.second.toTuple());
+  for (auto& iter : data) rank.push_back(iter.second.toTuple());
   sort(rank.begin(), rank.end());
-  //reverse(rank.begin(), rank.end());
+  // reverse(rank.begin(), rank.end());
 
-  const int size =  rank.size();
+  const int size = rank.size();
 
-  cout << "This rating is based on Aram Ebtekar's algorithm: https://github.com/EbTech/EloR" << endl;
+  cout << "This rating is based on Aram Ebtekar's algorithm: "
+          "https://github.com/EbTech/EloR"
+       << endl;
   cout << endl;
   cout << "sig_limit = " << (int)sig_limit << endl;
   cout << "sig_perf = " << (int)sig_perf << endl;
@@ -61,21 +62,19 @@ void genElorStatistics(const vector<string>& fileList, int top, const string& fo
   cout << "sig_noise = " << sig_noise << endl;
   cout << "participants = " << size << endl;
   cout << endl;
-  if (format == "json")
-  {
-    for (int i = 0; i < size; ++i)
-    {
+  if (format == "json") {
+    for (int i = 0; i < size; ++i) {
       const auto& iter = rank[i];
-      cout << "(" << i + 1 << ",\"" << get<1>(iter) << "\"," << -get<0>(iter) << "," << get<2>(iter) << ")," << endl;
+      cout << "(" << i + 1 << ",\"" << get<1>(iter) << "\"," << -get<0>(iter)
+           << "," << get<2>(iter) << ")," << endl;
     }
-  }
-  else
-  {
-    cout << left << setw(8) << "rank" << setw(24) << "id" << setw(10) << "rating" << setw(10) << "max rating" << endl;
-    for (int i = 0; i < size; ++i)
-    {
+  } else {
+    cout << left << setw(8) << "rank" << setw(24) << "id" << setw(10)
+         << "rating" << setw(10) << "max rating" << endl;
+    for (int i = 0; i < size; ++i) {
       const auto& iter = rank[i];
-      cout << left << setw(8) << i + 1 << setw(24) << get<1>(iter) << setw(10) << -get<0>(iter) << setw(10) << get<2>(iter) << endl;
+      cout << left << setw(8) << i + 1 << setw(24) << get<1>(iter) << setw(10)
+           << -get<0>(iter) << setw(10) << get<2>(iter) << endl;
     }
   }
 }
