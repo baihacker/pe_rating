@@ -5,8 +5,8 @@ import socket
 socket.setdefaulttimeout(60)
 
 cookie=''
-minid=277
-maxid=633
+minid=743
+maxid=743
 
 def fetch(id):
   opener = urllib2.build_opener()
