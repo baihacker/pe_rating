@@ -1,10 +1,10 @@
-#include "pe_lib.h"
-#include "cf.h"
-#include "EloR/EloR.h"
-
 #include <cstdio>
-#include <regex>
 #include <iostream>
+
+#include "EloR/EloR.h"
+#include "cf.h"
+#include "pe_lib.h"
+
 using namespace std;
 
 void genElorStatistics(const vector<string>& fileList, int top = -1,
