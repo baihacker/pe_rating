@@ -1,0 +1,1 @@
+g++ src/pe_scores.cpp src/pe_lib.cpp --std=c++11 -O3
