@@ -11,7 +11,7 @@ void genElorStatistics(const vector<string>& fileList, int top = -1,
                        const string& format = "console") {
   map<string, Player> data;
   set<string> all_guys;
-  vector<vector<string> > solver_data;
+  vector<vector<string>> solver_data;
   for (const auto& iter : fileList) {
     vector<SolverInfo> solvers = parseSolverInfo(readFile(iter));
     vector<string> solver_names;
@@ -140,7 +140,7 @@ void genCfStatistics(const vector<FileId>& fileList, int top = -1,
     }
   }
 
-  vector<pair<int, string> > vec;
+  vector<pair<int, string>> vec;
   for (auto& iter : data) {
     vec.push_back({iter.second, iter.first});
   }
@@ -177,6 +177,89 @@ void genCfStatistics(const vector<FileId>& fileList, int top = -1,
   }
 }
 
+struct Season {
+  string label;
+  string color;
+  int start;
+  int end;
+};
+
+#if 1
+Season seasons[]{
+    {"2014-2015", "#EFCD05", 477, 522}, {"2015-2016", "#813F0B", 523, 566},
+    {"2016-2017", "#420D09", 567, 608}, {"2017-2018", "#FE5BAC", 609, 633},
+    {"2018-2019", "#0080FE", 634, 677}, {"2019-2020", "#FCBB17", 678, 723},
+    {"all", "#FF0000", 477, -1}};
+#else
+Season seasons[]{{"2014_2015", 477, 522}};
+#endif
+const int season_count = sizeof(seasons) / sizeof(seasons[0]);
+
+void genCfStatisticsDb(const vector<FileId>& fileList, int top = -1) {
+  const int maxid = fileList.back().id;
+
+  cout << "[";
+  for (int i = 0; i < season_count; ++i) {
+    auto curr = seasons[i];
+    if (curr.end == -1) {
+      curr.end = maxid;
+    }
+    cerr << "Generating " << curr.label << endl;
+    CodeforcesRatingCalculator calculator;
+    map<string, vector<pair<int, int>>> rating_history;
+    map<string, int> data;
+    for (const auto& iter : fileList) {
+      if (iter.id < curr.start || iter.id > curr.end) {
+        continue;
+      }
+      vector<SolverInfo> solvers = parseSolverInfo(readFile(iter.path));
+      vector<string> solver_names;
+      for (auto& iter : solvers) solver_names.push_back(iter.name);
+      if (solver_names.empty()) continue;
+      if (top > 0 && solver_names.size() > top) solver_names.resize(top);
+      auto changes = calculator.calculateRatingChanges(data, solver_names);
+      for (auto& change : changes) {
+        if (data.count(change.first)) {
+          auto t = (data[change.first] += change.second);
+          rating_history[change.first].push_back({iter.id, t});
+        } else {
+          data[change.first] =
+              CodeforcesRatingCalculator::INITIAL_RATING + change.second;
+          rating_history[change.first].push_back(
+              {iter.id,
+               CodeforcesRatingCalculator::INITIAL_RATING + change.second});
+        }
+      }
+    }
+
+    if (i > 0) {
+      cout << ",";
+    }
+    cout << "{";
+    cout << "\"label\":\"" << curr.label << "\",";
+    cout << "\"start\":" << curr.start << ",";
+    cout << "\"end\":" << curr.end << ",";
+    cout << "\"color\":\"" << curr.color << "\",";
+    cout << "\"data\":"
+         << "{";
+
+    int uidx = 0;
+    for (auto& iter : rating_history) {
+      if (++uidx > 1) cout << ",";
+      cout << "\"" << iter.first << "\":"
+           << "[";
+      int idx = 0;
+      for (auto& iter1 : iter.second) {
+        if (++idx > 1) cout << ",";
+        cout << "[" << iter1.first << "," << iter1.second << "]";
+      }
+      cout << "]";
+    }
+    cout << "}}";
+  }
+  cout << "]" << endl;
+}
+
 int main(int argc, char* argv[]) {
   string dir = "data/pe/";
   int start = 0;
@@ -210,17 +293,21 @@ int main(int argc, char* argv[]) {
     }
   }
 
-  cout << "Author baihacker (bailiangsky@gmail.com)" << endl;
-  cout << "https://github.com/baihacker" << endl;
-  cout << endl;
+  if (format == "db") {
+    genCfStatisticsDb(genFileList(dir, 477, 1000), top);
+  } else {
+    cout << "Author baihacker (bailiangsky@gmail.com)" << endl;
+    cout << "https://github.com/baihacker" << endl;
+    cout << endl;
 
-  cout << "dir = " << dir << endl;
-  cout << "start = " << start << endl;
-  cout << "end = " << end << endl;
-  cout << "top = " << top << endl;
-  cout << "format = " << format << endl;
-  cout << endl;
+    cout << "dir = " << dir << endl;
+    cout << "start = " << start << endl;
+    cout << "end = " << end << endl;
+    cout << "top = " << top << endl;
+    cout << "format = " << format << endl;
+    cout << endl;
+    genCfStatistics(genFileList(dir, start, end), top, format);
+  }
 
-  genCfStatistics(genFileList(dir, start, end), top, format);
   return 0;
 }
