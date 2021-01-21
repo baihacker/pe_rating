@@ -195,9 +195,11 @@ Season seasons[]{{"2014_2015", 477, 522}};
 #endif
 const int season_count = sizeof(seasons) / sizeof(seasons[0]);
 
-void genCfStatisticsDb(const vector<FileId>& fileList, int top = -1) {
+void genPeDb(const vector<FileId>& fileList, int top = -1) {
   const int maxid = fileList.back().id;
 
+  cout << "{";
+  cout << "\"seasons\":";
   cout << "[";
   for (int i = 0; i < season_count; ++i) {
     auto curr = seasons[i];
@@ -257,7 +259,41 @@ void genCfStatisticsDb(const vector<FileId>& fileList, int top = -1) {
     }
     cout << "}}";
   }
-  cout << "]" << endl;
+  cout << "]";
+  cout << ",";
+  cout << "\"scores\":";
+  {
+    map<string, vector<pair<int, int>>> data;
+    for (const auto& iter : fileList) {
+      const int fileid = iter.id;
+      vector<SolverInfo> solvers = parseSolverInfo(readFile(iter.path));
+      vector<string> solver_names;
+      for (auto& iter : solvers) solver_names.push_back(iter.name);
+      if (solver_names.empty()) continue;
+      if (solver_names.size() > 50) solver_names.resize(50);
+      const int n = solver_names.size();
+      for (int i = 0; i < n; ++i) {
+        data[solvers[i].name].push_back({fileid, 50 - i});
+      }
+    }
+
+    int id = 0;
+    cout << "{";
+    for (auto iter : data) {
+      if (++id > 1) cout << ",";
+      cout << "\"" << iter.first << "\":";
+      cout << "[";
+      auto& data = iter.second;
+      const int n = data.size();
+      for (int i = 0; i < n; ++i) {
+        if (i > 0) cout << ",";
+        cout << "(" << data[i].first << "," << data[i].second << ")";
+      }
+      cout << "]";
+    }
+    cout << "}";
+  }
+  cout << "}" << endl;
 }
 
 int main(int argc, char* argv[]) {
@@ -294,7 +330,7 @@ int main(int argc, char* argv[]) {
   }
 
   if (format == "db") {
-    genCfStatisticsDb(genFileList(dir, 477, 1000), top);
+    genPeDb(genFileList(dir, 408, 1000), top);
   } else {
     cout << "Author baihacker (bailiangsky@gmail.com)" << endl;
     cout << "https://github.com/baihacker" << endl;
