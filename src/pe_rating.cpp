@@ -27,14 +27,13 @@ void genElorStatistics(const vector<string>& fileList, int top = -1,
   }
 #if 0
   int id = 0;
-  for (auto& iter: solver_data)
-  {
+  for (auto& iter : solver_data) {
     cerr << ++id << endl;
     vector<string> vec = iter;
     const int size = vec.size();
     set<string> have;
-    for (auto& iter1: vec) have.insert(iter1);
-    for (auto& iter1: all_guys)
+    for (auto& iter1 : vec) have.insert(iter1);
+    for (auto& iter1 : all_guys)
       if (!have.count(iter1)) vec.push_back(iter1);
 
     const int n = vec.size();
@@ -42,7 +41,7 @@ void genElorStatistics(const vector<string>& fileList, int top = -1,
     vector<int> rankhi(n);
     for (int i = 0; i < size; ++i) ranklo[i] = rankhi[i] = i;
     for (int i = size; i < n; ++i) ranklo[i] = size;
-    for (int i = size; i < n; ++i) rankhi[i] = n-1;
+    for (int i = size; i < n; ++i) rankhi[i] = n - 1;
     handleHistory(data, vec, ranklo, rankhi);
   }
 #endif
