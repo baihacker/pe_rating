@@ -287,13 +287,13 @@ void genPeDb(const vector<FileId>& fileList, int top = -1) {
       const int n = data.size();
       for (int i = 0; i < n; ++i) {
         if (i > 0) cout << ",";
-        cout << "(" << data[i].first << "," << data[i].second << ")";
+        cout << "[" << data[i].first << "," << data[i].second << "]";
       }
       cout << "]";
     }
     cout << "}";
   }
-  cout << "}" << endl;
+  cout << "}";
 }
 
 int main(int argc, char* argv[]) {
