@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <iostream>
 
-#include "EloR/EloR.h"
+#include "EloR.h"
 #include "cf.h"
 #include "pe_lib.h"
 
