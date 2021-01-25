@@ -1,5 +1,6 @@
 #ifndef __CF_H__
 #define __CF_H__
+
 /**
  * Author Mike Mirzayanov (mirzayanovmr@gmail.com)
  * http://codeforces.com/blog/entry/20762
