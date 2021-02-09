@@ -1,0 +1,1 @@
+g++ src/pe_rating.cpp src/pe_lib.cpp src/EloR.cpp --std=c++11 -O3 && a -d data/pe -f db > pe_db.txt && del a.exe
