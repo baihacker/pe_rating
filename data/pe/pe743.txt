@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
+<meta charset="utf-8">
 <meta name="author" content="Colin Hughes" />
 <meta name="description" content="A website dedicated to the fascinating world of mathematics and programming" />
 <meta name="keywords" content="programming,mathematics,problems,puzzles" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fastest Solvers - Project Euler</title>
-<link rel="shortcut icon" href="favicon.ico" />
-<link rel="stylesheet" type="text/css" href="themes/20201111/style_main.css" />
-<link rel="stylesheet" type="text/css" href="themes/20201111/style_default.css" />
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="themes/20210213/style_main.css">
+<link rel="stylesheet" type="text/css" href="themes/20210213/style_default.css">
 </head>
 
 <body>
 
 <div id="container">
 <div id="header" class="noprint">
-   <img src="themes/20201111/logo_default.png" alt="" />
+   <img src="themes/20210213/logo_default.png" alt="" />
 <div id="info_panel">
-Logged in as <strong>baihacker</strong><br>Sat, 16 Jan 2021, 23:36<br><span class="tooltip"><form class="csrf_form" method="post" action="sign_out"><input type="image" src="images/icons/sign_out.png" class="icon"><input type="hidden" name="csrf_token" value="ad4c181c55e83adfc90c0fecefdf9d41WiTnYJIKziy0VKdrXYtc0TkVuK/cGSsA/pQC0lKrUFJaeo763kAq9KK3kM+VLQ0vUYu0fOYmEJf7QLs="></form><span class="tooltiptext_narrow">Sign Out</span></span>&nbsp;&nbsp;&nbsp;<a href="search"><img src="images/icons/search_engine.png" alt="Search Problems" title="Search Problems" class="icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="rss2_euler.xml"><img src="images/icons/rss.png" alt="RSS Feed" title="RSS Feed" class="icon"></a>
+Logged in as <strong>baihacker</strong><br>Sun, 7 Mar 2021, 22:20<br><span class="tooltip"><form class="csrf_form" method="post" action="sign_out"><input type="image" src="images/icons/sign_out.png" class="icon"><input type="hidden" name="csrf_token" value="0cddabdecf0093f35b7518c5616eddcczkbhq8CiZOphKdXjqXgg1R7N+7oSQRQuw9+ocVMVja/DYbOeLeMcXnrdSCmJM/iIJ/HYoffYcg0OFgs="></form><span class="tooltiptext_narrow">Sign Out</span></span>&nbsp;&nbsp;&nbsp;<a href="search"><img src="images/icons/search_engine.png" alt="Search Problems" title="Search Problems" class="icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="rss2_euler.xml"><img src="images/icons/rss.png" alt="RSS Feed" title="RSS Feed" class="icon"></a>
 </div><!--end_info_panel-->
 </div> <!--end_header-->
 <div id="navigation" class="nav noprint">
@@ -41,7 +41,7 @@ Logged in as <strong>baihacker</strong><br>Sat, 16 Jan 2021, 23:36<br><span clas
 <div id="content">
 
 <div id="statistics_fastest_solvers_page">
-<div id="cache_info">Cached: Sat, 16 Jan 2021, 19:32</div><h2><a href="problem=743">Fastest Solvers - Problem 743</a></h2><table class="grid"><tr><th>&nbsp;</th><th class="username_column">User</th><th>&nbsp;</th><th class="language_column">Language</th><th class="time_column">Time To Solve</th><tr>
+<div id="cache_info">Cached: Sun, 7 Mar 2021, 18:22</div><h2><a href="problem=743">Fastest Solvers - Problem 743</a></h2><table class="grid"><tr><th>&nbsp;</th><th class="username_column">User</th><th>&nbsp;</th><th class="language_column">Language</th><th class="time_column">Time To Solve</th><tr>
 <td><span class="smallest strong">1st</span></td><td>hos-lyric</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=D">D</a></td><td>6  minutes, 53  seconds</td></tr><tr>
 <td><span class="smallest strong">2nd</span></td><td>Golovanov399</td><td><a href="location=Russia"><img src="images/flags/russia.png" title="Russia" alt="Russia" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>7  minutes, 14  seconds</td></tr><tr>
 <td><span class="smallest strong">3rd</span></td><td>satashun</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>9  minutes, 14  seconds</td></tr><tr>
@@ -89,7 +89,7 @@ Logged in as <strong>baihacker</strong><br>Sat, 16 Jan 2021, 23:36<br><span clas
 <td><span class="smallest strong">45th</span></td><td><span class="italic" title="murrayedwards">Murray</span></td><td><a href="location=New_Zealand"><img src="images/flags/new_zealand.png" title="New Zealand" alt="New Zealand" class="flag"></a></td><td><a href="language=ECMAScript">ECMAScript</a></td><td>1  hour, 8  minutes, 24  seconds</td></tr><tr>
 <td><span class="smallest strong">46th</span></td><td>philiplu</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>1  hour, 10  minutes, 45  seconds</td></tr><tr>
 <td><span class="smallest strong">47th</span></td><td>tcarr</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>1  hour, 14  minutes, 5  seconds</td></tr><tr>
-<td><span class="smallest strong">48th</span></td><td>butt</td><td>&nbsp;</td><td>&nbsp;</td><td>1  hour, 15  minutes, 1  second</td></tr><tr>
+<td><span class="smallest strong">48th</span></td><td>butt</td><td>&nbsp;</td><td><a href="language=ECMAScript">ECMAScript</a></td><td>1  hour, 15  minutes, 1  second</td></tr><tr>
 <td><span class="smallest strong">49th</span></td><td>ARoss</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>1  hour, 16  minutes, 14  seconds</td></tr><tr>
 <td><span class="smallest strong">50th</span></td><td>wborgeaud</td><td><a href="location=Switzerland"><img src="images/flags/switzerland.png" title="Switzerland" alt="Switzerland" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>1  hour, 16  minutes, 31  seconds</td></tr><tr>
 <td><span class="smallest strong">51st</span></td><td>VVejalla</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>1  hour, 18  minutes, 32  seconds</td></tr><tr>
@@ -106,7 +106,7 @@ Logged in as <strong>baihacker</strong><br>Sat, 16 Jan 2021, 23:36<br><span clas
 <td><span class="smallest strong">62nd</span></td><td>DerekLedbetter</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>1  hour, 31  minutes, 5  seconds</td></tr><tr>
 <td><span class="smallest strong">63rd</span></td><td>gramix</td><td>&nbsp;</td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>1  hour, 32  minutes, 44  seconds</td></tr><tr>
 <td><span class="smallest strong">64th</span></td><td><span class="italic" title="reinermartin">Reiner Martin</span></td><td><a href="location=Germany"><img src="images/flags/germany.png" title="Germany" alt="Germany" class="flag"></a></td><td><a href="language=Julia">Julia</a></td><td>1  hour, 32  minutes, 59  seconds</td></tr><tr>
-<td><span class="smallest strong">65th</span></td><td>asaf1250</td><td><a href="location=Israel"><img src="images/flags/israel.png" title="Israel" alt="Israel" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>1  hour, 34  minutes, 46  seconds</td></tr><tr>
+<td><span class="smallest strong">65th</span></td><td><span class="italic" title="asaf1250">asi</span></td><td><a href="location=Israel"><img src="images/flags/israel.png" title="Israel" alt="Israel" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>1  hour, 34  minutes, 46  seconds</td></tr><tr>
 <td><span class="smallest strong">66th</span></td><td>jj_rabeyrin</td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td>&nbsp;</td><td>1  hour, 37  minutes</td></tr><tr>
 <td><span class="smallest strong">67th</span></td><td>jozhan</td><td><a href="location=Netherlands"><img src="images/flags/netherlands.png" title="Netherlands" alt="Netherlands" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>1  hour, 38  minutes, 20  seconds</td></tr><tr>
 <td><span class="smallest strong">68th</span></td><td>WG4ZHZ2P2Q</td><td>&nbsp;</td><td>&nbsp;</td><td>1  hour, 47  minutes, 15  seconds</td></tr><tr>
@@ -138,7 +138,7 @@ Logged in as <strong>baihacker</strong><br>Sat, 16 Jan 2021, 23:36<br><span clas
 <td><span class="smallest strong">94th</span></td><td>brob26</td><td><a href="location=Australia"><img src="images/flags/australia.png" title="Australia" alt="Australia" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>4  hours, 36  minutes, 19  seconds</td></tr><tr>
 <td><span class="smallest strong">95th</span></td><td>abcwuhang</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>5  hours, 16  minutes, 42  seconds</td></tr><tr>
 <td><span class="smallest strong">96th</span></td><td>gautrang</td><td><a href="location=Vietnam"><img src="images/flags/vietnam.png" title="Vietnam" alt="Vietnam" class="flag"></a></td><td>&nbsp;</td><td>5  hours, 16  minutes, 45  seconds</td></tr><tr>
-<td><span class="smallest strong">97th</span></td><td>dobbyisafreeelf</td><td><a href="location=India"><img src="images/flags/india.png" title="India" alt="India" class="flag"></a></td><td>&nbsp;</td><td>5  hours, 18  minutes, 10  seconds</td></tr><tr>
+<td><span class="smallest strong">97th</span></td><td>dobbyisafreeelf</td><td><a href="location=India"><img src="images/flags/india.png" title="India" alt="India" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>5  hours, 18  minutes, 10  seconds</td></tr><tr>
 <td><span class="smallest strong">98th</span></td><td>mercurium</td><td><a href="location=Taiwan"><img src="images/flags/taiwan.png" title="Taiwan" alt="Taiwan" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>5  hours, 23  minutes, 27  seconds</td></tr><tr>
 <td><span class="smallest strong">99th</span></td><td><span class="italic" title="lzyrapx">lzyrapx</span></td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>5  hours, 29  minutes, 55  seconds</td></tr><tr>
 <td><span class="smallest strong">100th</span></td><td>ozgur.ozcelik</td><td><a href="location=Turkey"><img src="images/flags/turkey.png" title="Turkey" alt="Turkey" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>5  hours, 31  minutes, 58  seconds</td></tr></table>

@@ -18,7 +18,7 @@
 <div id="header" class="noprint">
    <img src="themes/20210213/logo_default.png" alt="" />
 <div id="info_panel">
-Logged in as <strong>baihacker</strong><br>Sat, 27 Feb 2021, 17:15<br><span class="tooltip"><form class="csrf_form" method="post" action="sign_out"><input type="image" src="images/icons/sign_out.png" class="icon"><input type="hidden" name="csrf_token" value="d22912bced36275ba4436234c414d534M802+F9eiN4u+yU6lSL3ovE7dPrUE+aqFafXsIt6LJVB6eDJZ1yLtkhNWOSR0AD+zco74Rcnmcdo0pE="></form><span class="tooltiptext_narrow">Sign Out</span></span>&nbsp;&nbsp;&nbsp;<a href="search"><img src="images/icons/search_engine.png" alt="Search Problems" title="Search Problems" class="icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="rss2_euler.xml"><img src="images/icons/rss.png" alt="RSS Feed" title="RSS Feed" class="icon"></a>
+Logged in as <strong>baihacker</strong><br>Sun, 7 Mar 2021, 22:20<br><span class="tooltip"><form class="csrf_form" method="post" action="sign_out"><input type="image" src="images/icons/sign_out.png" class="icon"><input type="hidden" name="csrf_token" value="ace40114b21e6d4e97ce3b3733c2941ez0A8UDcN/5PFoQZTrjSNemSAta0gtsikHG214waU5mVxsM27C2vfs1Q/Rjv2MyRiX1BMEk9cZUEIchs="></form><span class="tooltiptext_narrow">Sign Out</span></span>&nbsp;&nbsp;&nbsp;<a href="search"><img src="images/icons/search_engine.png" alt="Search Problems" title="Search Problems" class="icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="rss2_euler.xml"><img src="images/icons/rss.png" alt="RSS Feed" title="RSS Feed" class="icon"></a>
 </div><!--end_info_panel-->
 </div> <!--end_header-->
 <div id="navigation" class="nav noprint">
@@ -41,7 +41,7 @@ Logged in as <strong>baihacker</strong><br>Sat, 27 Feb 2021, 17:15<br><span clas
 <div id="content">
 
 <div id="statistics_fastest_solvers_page">
-<div id="cache_info">Cached: Sat, 27 Feb 2021, 16:01</div><h2><a href="problem=749">Fastest Solvers - Problem 749</a></h2><table class="grid"><tr><th>&nbsp;</th><th class="username_column">User</th><th>&nbsp;</th><th class="language_column">Language</th><th class="time_column">Time To Solve</th><tr>
+<div id="cache_info">Cached: Sat, 6 Mar 2021, 20:21</div><h2><a href="problem=749">Fastest Solvers - Problem 749</a></h2><table class="grid"><tr><th>&nbsp;</th><th class="username_column">User</th><th>&nbsp;</th><th class="language_column">Language</th><th class="time_column">Time To Solve</th><tr>
 <td><span class="smallest strong">1st</span></td><td>uwi</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=Java">Java</a></td><td>11  minutes, 27  seconds</td></tr><tr>
 <td><span class="smallest strong">2nd</span></td><td>hos-lyric</td><td><a href="location=Japan"><img src="images/flags/japan.png" title="Japan" alt="Japan" class="flag"></a></td><td><a href="language=D">D</a></td><td>14  minutes, 20  seconds</td></tr><tr>
 <td><span class="smallest strong">3rd</span></td><td>user202729</td><td>&nbsp;</td><td>&nbsp;</td><td>15  minutes, 50  seconds</td></tr><tr>
