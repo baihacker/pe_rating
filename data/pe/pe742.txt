@@ -18,7 +18,7 @@
 <div id="header" class="noprint">
    <img src="themes/20210213/logo_default.png" alt="" />
 <div id="info_panel">
-Logged in as <strong>baihacker</strong><br>Sun, 7 Mar 2021, 22:20<br><span class="tooltip"><form class="csrf_form" method="post" action="sign_out"><input type="image" src="images/icons/sign_out.png" class="icon"><input type="hidden" name="csrf_token" value="8f1bef8854f86b2dd6afcc5974f02a6f6b5awQMxUY8xK4cdQyGT4oGQ6s/QRuh0rvCyuYu9kNdu8RyOSVuwy523fptRz9al6yDkWPT9i48XuV8="></form><span class="tooltiptext_narrow">Sign Out</span></span>&nbsp;&nbsp;&nbsp;<a href="search"><img src="images/icons/search_engine.png" alt="Search Problems" title="Search Problems" class="icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="rss2_euler.xml"><img src="images/icons/rss.png" alt="RSS Feed" title="RSS Feed" class="icon"></a>
+Logged in as <strong>baihacker</strong><br>Sat, 13 Mar 2021, 17:28<br><span class="tooltip"><form class="csrf_form" method="post" action="sign_out"><input type="image" src="images/icons/sign_out.png" class="icon"><input type="hidden" name="csrf_token" value="2eea66f31a3ae57685fcf5e36841ab9eAK1kBpdkXBTL8wWfySnLiVf6o1gHGz1Ay0w5zhTXPml+H0OsH/VzvtX7DnN1KpnoQiNsjQc6j4UYh5U="></form><span class="tooltiptext_narrow">Sign Out</span></span>&nbsp;&nbsp;&nbsp;<a href="search"><img src="images/icons/search_engine.png" alt="Search Problems" title="Search Problems" class="icon"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="rss2_euler.xml"><img src="images/icons/rss.png" alt="RSS Feed" title="RSS Feed" class="icon"></a>
 </div><!--end_info_panel-->
 </div> <!--end_header-->
 <div id="navigation" class="nav noprint">
@@ -41,7 +41,7 @@ Logged in as <strong>baihacker</strong><br>Sun, 7 Mar 2021, 22:20<br><span class
 <div id="content">
 
 <div id="statistics_fastest_solvers_page">
-<div id="cache_info">Cached: Sun, 7 Mar 2021, 05:44</div><h2><a href="problem=742">Fastest Solvers - Problem 742</a></h2><table class="grid"><tr><th>&nbsp;</th><th class="username_column">User</th><th>&nbsp;</th><th class="language_column">Language</th><th class="time_column">Time To Solve</th><tr>
+<div id="cache_info">Cached: Fri, 12 Mar 2021, 22:20</div><h2><a href="problem=742">Fastest Solvers - Problem 742</a></h2><table class="grid"><tr><th>&nbsp;</th><th class="username_column">User</th><th>&nbsp;</th><th class="language_column">Language</th><th class="time_column">Time To Solve</th><tr>
 <td><span class="smallest strong">1st</span></td><td>Gennady</td><td><a href="location=Belarus"><img src="images/flags/belarus.png" title="Belarus" alt="Belarus" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>15  minutes, 19  seconds</td></tr><tr>
 <td><span class="smallest strong">2nd</span></td><td>ecnerwala</td><td><a href="location=USA"><img src="images/flags/usa.png" title="USA" alt="USA" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>23  minutes, 17  seconds</td></tr><tr>
 <td><span class="smallest strong">3rd</span></td><td>endagorion</td><td><a href="location=Russia"><img src="images/flags/russia.png" title="Russia" alt="Russia" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>32  minutes, 58  seconds</td></tr><tr>
@@ -138,7 +138,9 @@ Logged in as <strong>baihacker</strong><br>Sun, 7 Mar 2021, 22:20<br><span class
 <td><span class="smallest strong">94th</span></td><td>dario2994</td><td><a href="location=Italy"><img src="images/flags/italy.png" title="Italy" alt="Italy" class="flag"></a></td><td><a href="language=C%252FC%252B%252B">C/C++</a></td><td>6  weeks, 4  days, 34  minutes, 34  seconds</td></tr><tr>
 <td><span class="smallest strong">95th</span></td><td><span class="italic" title="MaxIsTheBest">Max is the best</span></td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>6  weeks, 6  days, 10  hours, 22  minutes, 39  seconds</td></tr><tr>
 <td><span class="smallest strong">96th</span></td><td>MorningJam</td><td>&nbsp;</td><td>&nbsp;</td><td>7  weeks, 3  hours, 17  minutes, 23  seconds</td></tr><tr>
-<td><span class="smallest strong">97th</span></td><td>mountain</td><td><a href="location=Russia"><img src="images/flags/russia.png" title="Russia" alt="Russia" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>7  weeks, 12  hours, 20  minutes, 30  seconds</td></tr></table>
+<td><span class="smallest strong">97th</span></td><td>mountain</td><td><a href="location=Russia"><img src="images/flags/russia.png" title="Russia" alt="Russia" class="flag"></a></td><td><a href="language=Python">Python</a></td><td>7  weeks, 12  hours, 20  minutes, 30  seconds</td></tr><tr>
+<td><span class="smallest strong">98th</span></td><td>fanzhuyifan</td><td><a href="location=China"><img src="images/flags/china.png" title="China" alt="China" class="flag"></a></td><td><a href="language=Haskell">Haskell</a></td><td>8  weeks, 2  days, 3  hours, 5  minutes, 17  seconds</td></tr><tr>
+<td><span class="smallest strong">99th</span></td><td><span class="italic" title="wegank">Weijia Wang</span></td><td><a href="location=France"><img src="images/flags/france.png" title="France" alt="France" class="flag"></a></td><td><a href="language=OCaml">OCaml</a></td><td>8  weeks, 2  days, 21  hours, 39  seconds</td></tr></table>
 </div></div> <!--end_content-->
 </div> <!--end_container-->
 
