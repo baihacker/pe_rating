@@ -9,8 +9,8 @@ SCRIPT_DIRECTORY = os.path.dirname(os.path.realpath(__file__))
 socket.setdefaulttimeout(60)
 
 cookie = ''
-minid = 760
-maxid = 760
+minid = 761
+maxid = 761
 
 
 def fetch(id):
